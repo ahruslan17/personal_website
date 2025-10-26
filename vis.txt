@@ -1,0 +1,2501 @@
+{
+  "title": "AggTagsTableMD (copy 27)",
+  "type": "metrics",
+  "aggs": [],
+  "params": {
+    "id": "61ca57f0-469d-11e7-af02-69e470af7417",
+    "type": "markdown",
+    "series": [
+      {
+        "id": "61ca57f1-469d-11e7-af02-69e470af7417",
+        "color": "#54B399",
+        "split_mode": "filters",
+        "split_color_mode": "opensearchDashboards",
+        "metrics": [
+          {
+            "id": "61ca57f2-469d-11e7-af02-69e470af7417",
+            "type": "count"
+          }
+        ],
+        "separate_axis": 0,
+        "axis_position": "right",
+        "formatter": "number",
+        "chart_type": "line",
+        "line_width": 1,
+        "point_size": 1,
+        "fill": 0.5,
+        "stacked": "none",
+        "label": "Shows",
+        "filter": {
+          "query": "Type:OfferGiven",
+          "language": "lucene"
+        },
+        "var_name": "Shows",
+        "split_filters": [
+          {
+            "filter": {
+              "query": "s.OfferId:[11000 TO 11056]",
+              "language": "lucene"
+            },
+            "label": "MixedLight",
+            "color": "#54B399",
+            "id": "f95339c0-f5b9-11ee-bccf-65f164ff78f5"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11100 TO 11156]",
+              "language": "lucene"
+            },
+            "label": "MixedDark",
+            "color": "#54B399",
+            "id": "e3c51410-f5ba-11ee-bccf-65f164ff78f5"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11200 TO 11256]",
+              "language": "lucene"
+            },
+            "label": "ChestLightDark",
+            "color": "#54B399",
+            "id": "254f7d80-f5bb-11ee-bccf-65f164ff78f5"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11300 TO 11356]",
+              "language": "lucene"
+            },
+            "label": "ChestLight",
+            "color": "#54B399",
+            "id": "259a1b10-f5bb-11ee-bccf-65f164ff78f5"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11400 TO 11456]",
+              "language": "lucene"
+            },
+            "label": "ChestDark",
+            "color": "#54B399",
+            "id": "25b89f90-f5bb-11ee-bccf-65f164ff78f5"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11500 TO 11556]",
+              "language": "lucene"
+            },
+            "label": "ChestMagLightDark",
+            "color": "#54B399",
+            "id": "25fde5f0-f5bb-11ee-bccf-65f164ff78f5"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11600 TO 11656]",
+              "language": "lucene"
+            },
+            "label": "ChestMagLight",
+            "color": "#54B399",
+            "id": "26142d10-f5bb-11ee-bccf-65f164ff78f5"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11700 TO 11756]",
+              "language": "lucene"
+            },
+            "label": "ChestMagDark",
+            "color": "#54B399",
+            "id": "273b47f0-f5bb-11ee-bccf-65f164ff78f5"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11800 TO 11890]",
+              "language": "lucene"
+            },
+            "label": "SoftHard",
+            "color": "#54B399",
+            "id": "e0571920-0add-11f0-801b-99e3b4e5776b"
+          },
+          {
+            "filter": {
+              "query": "",
+              "language": "lucene"
+            },
+            "label": "",
+            "color": "#54B399",
+            "id": "e16ad310-0add-11f0-801b-99e3b4e5776b"
+          },
+          {
+            "filter": {
+              "query": "",
+              "language": "lucene"
+            },
+            "label": "",
+            "color": "#54B399",
+            "id": "e6915620-0add-11f0-801b-99e3b4e5776b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13000 TO 13056]",
+              "language": "lucene"
+            },
+            "label": "Worker",
+            "color": "#54B399",
+            "id": "worker-13000-13056"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13800 TO 13856]",
+              "language": "lucene"
+            },
+            "label": "Slave",
+            "color": "#54B399",
+            "id": "slave-13800-13856"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13100 TO 13156]",
+              "language": "lucene"
+            },
+            "label": "Swordsman",
+            "color": "#54B399",
+            "id": "swordsman-13100-13156"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13900 TO 13956]",
+              "language": "lucene"
+            },
+            "label": "Groon",
+            "color": "#54B399",
+            "id": "groon-13900-13956"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13200 TO 13256]",
+              "language": "lucene"
+            },
+            "label": "Warsmith",
+            "color": "#54B399",
+            "id": "warsmith-13200-13256"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14000 TO 14056]",
+              "language": "lucene"
+            },
+            "label": "SkArch",
+            "color": "#54B399",
+            "id": "skarch-14000-14056"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13300 TO 13356]",
+              "language": "lucene"
+            },
+            "label": "Archer",
+            "color": "#54B399",
+            "id": "archer-13300-13356"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14100 TO 14156]",
+              "language": "lucene"
+            },
+            "label": "Bomber",
+            "color": "#54B399",
+            "id": "bomber-14100-14156"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13400 TO 13456]",
+              "language": "lucene"
+            },
+            "label": "Copter",
+            "color": "#54B399",
+            "id": "copter-13400-13456"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14200 TO 14256]",
+              "language": "lucene"
+            },
+            "label": "Aeronaut",
+            "color": "#54B399",
+            "id": "aeronaut-14200-14256"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13500 TO 13556]",
+              "language": "lucene"
+            },
+            "label": "Guards",
+            "color": "#54B399",
+            "id": "guards-13500-13556"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14300 TO 14356]",
+              "language": "lucene"
+            },
+            "label": "AxeMaster",
+            "color": "#54B399",
+            "id": "axemaster-14300-14356"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13600 TO 13656]",
+              "language": "lucene"
+            },
+            "label": "Fox",
+            "color": "#54B399",
+            "id": "fox-13600-13656"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14400 TO 14456]",
+              "language": "lucene"
+            },
+            "label": "Zombie",
+            "color": "#54B399",
+            "id": "zombie-14400-14456"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13700 TO 13756]",
+              "language": "lucene"
+            },
+            "label": "Boat",
+            "color": "#54B399",
+            "id": "boat-13700-13756"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14500 TO 14556]",
+              "language": "lucene"
+            },
+            "label": "Schooner",
+            "color": "#54B399",
+            "id": "schooner-14500-14556"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16000 TO 16056]",
+              "language": "lucene"
+            },
+            "label": "Knight",
+            "color": "#54B399",
+            "id": "knight-16000-16056"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16500 TO 16556]",
+              "language": "lucene"
+            },
+            "label": "Rider",
+            "color": "#54B399",
+            "id": "rider-16500-16556"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16100 TO 16156]",
+              "language": "lucene"
+            },
+            "label": "Ballista",
+            "color": "#54B399",
+            "id": "ballista-16100-16156"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16600 TO 16656]",
+              "language": "lucene"
+            },
+            "label": "Catapult",
+            "color": "#54B399",
+            "id": "catapult-16600-16656"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16200 TO 16256]",
+              "language": "lucene"
+            },
+            "label": "Wind",
+            "color": "#54B399",
+            "id": "wind-16200-16256"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16700 TO 16756]",
+              "language": "lucene"
+            },
+            "label": "Drill",
+            "color": "#54B399",
+            "id": "drill-16700-16756"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16300 TO 16356]",
+              "language": "lucene"
+            },
+            "label": "Biker",
+            "color": "#54B399",
+            "id": "biker-16300-16356"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16800 TO 16856]",
+              "language": "lucene"
+            },
+            "label": "Venomspiter",
+            "color": "#54B399",
+            "id": "venomspiter-16800-16856"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16400 TO 16456]",
+              "language": "lucene"
+            },
+            "label": "Caravel",
+            "color": "#54B399",
+            "id": "caravel-16400-16456"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16900 TO 16956]",
+              "language": "lucene"
+            },
+            "label": "Galleon",
+            "color": "#54B399",
+            "id": "galleon-16900-16956"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[19000 TO 19056]",
+              "language": "lucene"
+            },
+            "label": "Healer",
+            "color": "#54B399",
+            "id": "healer-19000-19056"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[19200 TO 19256]",
+              "language": "lucene"
+            },
+            "label": "Necro",
+            "color": "#54B399",
+            "id": "necro-19200-19256"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[19100 TO 19156]",
+              "language": "lucene"
+            },
+            "label": "Sniper",
+            "color": "#54B399",
+            "id": "sniper-19100-19156"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[19300 TO 19356]",
+              "language": "lucene"
+            },
+            "label": "Rocketeer",
+            "color": "#54B399",
+            "id": "rocketeer-19300-19356"
+          }
+        ]
+      },
+      {
+        "id": "f94bfbe0-f5bb-11ee-bccf-65f164ff78f5",
+        "color": "#54B399",
+        "split_mode": "filters",
+        "split_color_mode": "opensearchDashboards",
+        "metrics": [
+          {
+            "id": "f94bfbe1-f5bb-11ee-bccf-65f164ff78f5",
+            "type": "count"
+          }
+        ],
+        "separate_axis": 0,
+        "axis_position": "right",
+        "formatter": "number",
+        "chart_type": "line",
+        "line_width": 1,
+        "point_size": 1,
+        "fill": 0.5,
+        "stacked": "none",
+        "label": "Billings",
+        "filter": {
+          "query": "Type:Purchase",
+          "language": "lucene"
+        },
+        "var_name": "Billings",
+        "split_filters": [
+          {
+            "filter": {
+              "query": "s.OfferId:[11000 TO 11056]",
+              "language": "lucene"
+            },
+            "label": "MixedLight",
+            "color": "#54B399",
+            "id": "f95339c0-f5b9-11ee-bccf-65f164ff78f5"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11100 TO 11156]",
+              "language": "lucene"
+            },
+            "label": "MixedDark",
+            "color": "#54B399",
+            "id": "e3c51410-f5ba-11ee-bccf-65f164ff78f5"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11200 TO 11256]",
+              "language": "lucene"
+            },
+            "label": "ChestLightDark",
+            "color": "#54B399",
+            "id": "254f7d80-f5bb-11ee-bccf-65f164ff78f5"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11300 TO 11356]",
+              "language": "lucene"
+            },
+            "label": "ChestLight",
+            "color": "#54B399",
+            "id": "259a1b10-f5bb-11ee-bccf-65f164ff78f5"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11400 TO 11456]",
+              "language": "lucene"
+            },
+            "label": "ChestDark",
+            "color": "#54B399",
+            "id": "25b89f90-f5bb-11ee-bccf-65f164ff78f5"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11500 TO 11556]",
+              "language": "lucene"
+            },
+            "label": "ChestMagLightDark",
+            "color": "#54B399",
+            "id": "25fde5f0-f5bb-11ee-bccf-65f164ff78f5"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11600 TO 11656]",
+              "language": "lucene"
+            },
+            "label": "ChestMagLight",
+            "color": "#54B399",
+            "id": "26142d10-f5bb-11ee-bccf-65f164ff78f5"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11700 TO 11756]",
+              "language": "lucene"
+            },
+            "label": "ChestMagDark",
+            "color": "#54B399",
+            "id": "273b47f0-f5bb-11ee-bccf-65f164ff78f5"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11800 TO 11890]",
+              "language": "lucene"
+            },
+            "label": "SoftHard",
+            "color": "#54B399",
+            "id": "e7b340e0-0add-11f0-801b-99e3b4e5776b"
+          },
+          {
+            "filter": {
+              "query": "",
+              "language": "lucene"
+            },
+            "label": "",
+            "color": "#54B399",
+            "id": "e81006e0-0add-11f0-801b-99e3b4e5776b"
+          },
+          {
+            "filter": {
+              "query": "",
+              "language": "lucene"
+            },
+            "label": "",
+            "color": "#54B399",
+            "id": "e90c6840-0add-11f0-801b-99e3b4e5776b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13000 TO 13056]",
+              "language": "lucene"
+            },
+            "label": "Worker",
+            "color": "#54B399",
+            "id": "worker-13000-13056"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13800 TO 13856]",
+              "language": "lucene"
+            },
+            "label": "Slave",
+            "color": "#54B399",
+            "id": "slave-13800-13856"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13100 TO 13156]",
+              "language": "lucene"
+            },
+            "label": "Swordsman",
+            "color": "#54B399",
+            "id": "swordsman-13100-13156"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13900 TO 13956]",
+              "language": "lucene"
+            },
+            "label": "Groon",
+            "color": "#54B399",
+            "id": "groon-13900-13956"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13200 TO 13256]",
+              "language": "lucene"
+            },
+            "label": "Warsmith",
+            "color": "#54B399",
+            "id": "warsmith-13200-13256"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14000 TO 14056]",
+              "language": "lucene"
+            },
+            "label": "SkArch",
+            "color": "#54B399",
+            "id": "skarch-14000-14056"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13300 TO 13356]",
+              "language": "lucene"
+            },
+            "label": "Archer",
+            "color": "#54B399",
+            "id": "archer-13300-13356"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14100 TO 14156]",
+              "language": "lucene"
+            },
+            "label": "Bomber",
+            "color": "#54B399",
+            "id": "bomber-14100-14156"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13400 TO 13456]",
+              "language": "lucene"
+            },
+            "label": "Copter",
+            "color": "#54B399",
+            "id": "copter-13400-13456"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14200 TO 14256]",
+              "language": "lucene"
+            },
+            "label": "Aeronaut",
+            "color": "#54B399",
+            "id": "aeronaut-14200-14256"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13500 TO 13556]",
+              "language": "lucene"
+            },
+            "label": "Guards",
+            "color": "#54B399",
+            "id": "guards-13500-13556"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14300 TO 14356]",
+              "language": "lucene"
+            },
+            "label": "AxeMaster",
+            "color": "#54B399",
+            "id": "axemaster-14300-14356"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13600 TO 13656]",
+              "language": "lucene"
+            },
+            "label": "Fox",
+            "color": "#54B399",
+            "id": "fox-13600-13656"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14400 TO 14456]",
+              "language": "lucene"
+            },
+            "label": "Zombie",
+            "color": "#54B399",
+            "id": "zombie-14400-14456"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13700 TO 13756]",
+              "language": "lucene"
+            },
+            "label": "Boat",
+            "color": "#54B399",
+            "id": "boat-13700-13756"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14500 TO 14556]",
+              "language": "lucene"
+            },
+            "label": "Schooner",
+            "color": "#54B399",
+            "id": "schooner-14500-14556"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16000 TO 16056]",
+              "language": "lucene"
+            },
+            "label": "Knight",
+            "color": "#54B399",
+            "id": "knight-16000-16056"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16500 TO 16556]",
+              "language": "lucene"
+            },
+            "label": "Rider",
+            "color": "#54B399",
+            "id": "rider-16500-16556"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16100 TO 16156]",
+              "language": "lucene"
+            },
+            "label": "Ballista",
+            "color": "#54B399",
+            "id": "ballista-16100-16156"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16600 TO 16656]",
+              "language": "lucene"
+            },
+            "label": "Catapult",
+            "color": "#54B399",
+            "id": "catapult-16600-16656"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16200 TO 16256]",
+              "language": "lucene"
+            },
+            "label": "Wind",
+            "color": "#54B399",
+            "id": "wind-16200-16256"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16700 TO 16756]",
+              "language": "lucene"
+            },
+            "label": "Drill",
+            "color": "#54B399",
+            "id": "drill-16700-16756"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16300 TO 16356]",
+              "language": "lucene"
+            },
+            "label": "Biker",
+            "color": "#54B399",
+            "id": "biker-16300-16356"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16800 TO 16856]",
+              "language": "lucene"
+            },
+            "label": "Venomspiter",
+            "color": "#54B399",
+            "id": "venomspiter-16800-16856"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16400 TO 16456]",
+              "language": "lucene"
+            },
+            "label": "Caravel",
+            "color": "#54B399",
+            "id": "caravel-16400-16456"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16900 TO 16956]",
+              "language": "lucene"
+            },
+            "label": "Galleon",
+            "color": "#54B399",
+            "id": "galleon-16900-16956"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[19000 TO 19056]",
+              "language": "lucene"
+            },
+            "label": "Healer",
+            "color": "#54B399",
+            "id": "healer-19000-19056"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[19200 TO 19256]",
+              "language": "lucene"
+            },
+            "label": "Necro",
+            "color": "#54B399",
+            "id": "necro-19200-19256"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[19100 TO 19156]",
+              "language": "lucene"
+            },
+            "label": "Sniper",
+            "color": "#54B399",
+            "id": "sniper-19100-19156"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[19300 TO 19356]",
+              "language": "lucene"
+            },
+            "label": "Rocketeer",
+            "color": "#54B399",
+            "id": "rocketeer-19300-19356"
+          }
+        ]
+      },
+      {
+        "id": "7f202060-f5bd-11ee-bccf-65f164ff78f5",
+        "color": "#54B399",
+        "split_mode": "filters",
+        "split_color_mode": "opensearchDashboards",
+        "metrics": [
+          {
+            "id": "7f202061-f5bd-11ee-bccf-65f164ff78f5",
+            "type": "sum",
+            "field": "s.PriceBaseUsd"
+          }
+        ],
+        "separate_axis": 0,
+        "axis_position": "right",
+        "formatter": "number",
+        "chart_type": "line",
+        "line_width": 1,
+        "point_size": 1,
+        "fill": 0.5,
+        "stacked": "none",
+        "label": "USD",
+        "filter": {
+          "query": "Type:Purchase",
+          "language": "lucene"
+        },
+        "var_name": "USD",
+        "split_filters": [
+          {
+            "filter": {
+              "query": "s.OfferId:[11000 TO 11056]",
+              "language": "lucene"
+            },
+            "label": "MixedLight",
+            "color": "#54B399",
+            "id": "f95339c0-f5b9-11ee-bccf-65f164ff78f5"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11100 TO 11156]",
+              "language": "lucene"
+            },
+            "label": "MixedDark",
+            "color": "#54B399",
+            "id": "e3c51410-f5ba-11ee-bccf-65f164ff78f5"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11200 TO 11256]",
+              "language": "lucene"
+            },
+            "label": "ChestLightDark",
+            "color": "#54B399",
+            "id": "254f7d80-f5bb-11ee-bccf-65f164ff78f5"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11300 TO 11356]",
+              "language": "lucene"
+            },
+            "label": "ChestLight",
+            "color": "#54B399",
+            "id": "259a1b10-f5bb-11ee-bccf-65f164ff78f5"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11400 TO 11456]",
+              "language": "lucene"
+            },
+            "label": "ChestDark",
+            "color": "#54B399",
+            "id": "25b89f90-f5bb-11ee-bccf-65f164ff78f5"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11500 TO 11556]",
+              "language": "lucene"
+            },
+            "label": "ChestMagLightDark",
+            "color": "#54B399",
+            "id": "25fde5f0-f5bb-11ee-bccf-65f164ff78f5"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11600 TO 11656]",
+              "language": "lucene"
+            },
+            "label": "ChestMagLight",
+            "color": "#54B399",
+            "id": "26142d10-f5bb-11ee-bccf-65f164ff78f5"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11700 TO 11756]",
+              "language": "lucene"
+            },
+            "label": "ChestMagDark",
+            "color": "#54B399",
+            "id": "273b47f0-f5bb-11ee-bccf-65f164ff78f5"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11800 TO 11890]",
+              "language": "lucene"
+            },
+            "label": "SoftHard",
+            "color": "#54B399",
+            "id": "ec7b5040-0add-11f0-801b-99e3b4e5776b"
+          },
+          {
+            "filter": {
+              "query": "",
+              "language": "lucene"
+            },
+            "label": "",
+            "color": "#54B399",
+            "id": "ecc63bf0-0add-11f0-801b-99e3b4e5776b"
+          },
+          {
+            "filter": {
+              "query": "",
+              "language": "lucene"
+            },
+            "label": "",
+            "color": "#54B399",
+            "id": "ed2d8940-0add-11f0-801b-99e3b4e5776b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13000 TO 13056]",
+              "language": "lucene"
+            },
+            "label": "Worker",
+            "color": "#54B399",
+            "id": "worker-13000-13056"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13800 TO 13856]",
+              "language": "lucene"
+            },
+            "label": "Slave",
+            "color": "#54B399",
+            "id": "slave-13800-13856"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13100 TO 13156]",
+              "language": "lucene"
+            },
+            "label": "Swordsman",
+            "color": "#54B399",
+            "id": "swordsman-13100-13156"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13900 TO 13956]",
+              "language": "lucene"
+            },
+            "label": "Groon",
+            "color": "#54B399",
+            "id": "groon-13900-13956"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13200 TO 13256]",
+              "language": "lucene"
+            },
+            "label": "Warsmith",
+            "color": "#54B399",
+            "id": "warsmith-13200-13256"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14000 TO 14056]",
+              "language": "lucene"
+            },
+            "label": "SkArch",
+            "color": "#54B399",
+            "id": "skarch-14000-14056"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13300 TO 13356]",
+              "language": "lucene"
+            },
+            "label": "Archer",
+            "color": "#54B399",
+            "id": "archer-13300-13356"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14100 TO 14156]",
+              "language": "lucene"
+            },
+            "label": "Bomber",
+            "color": "#54B399",
+            "id": "bomber-14100-14156"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13400 TO 13456]",
+              "language": "lucene"
+            },
+            "label": "Copter",
+            "color": "#54B399",
+            "id": "copter-13400-13456"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14200 TO 14256]",
+              "language": "lucene"
+            },
+            "label": "Aeronaut",
+            "color": "#54B399",
+            "id": "aeronaut-14200-14256"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13500 TO 13556]",
+              "language": "lucene"
+            },
+            "label": "Guards",
+            "color": "#54B399",
+            "id": "guards-13500-13556"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14300 TO 14356]",
+              "language": "lucene"
+            },
+            "label": "AxeMaster",
+            "color": "#54B399",
+            "id": "axemaster-14300-14356"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13600 TO 13656]",
+              "language": "lucene"
+            },
+            "label": "Fox",
+            "color": "#54B399",
+            "id": "fox-13600-13656"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14400 TO 14456]",
+              "language": "lucene"
+            },
+            "label": "Zombie",
+            "color": "#54B399",
+            "id": "zombie-14400-14456"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13700 TO 13756]",
+              "language": "lucene"
+            },
+            "label": "Boat",
+            "color": "#54B399",
+            "id": "boat-13700-13756"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14500 TO 14556]",
+              "language": "lucene"
+            },
+            "label": "Schooner",
+            "color": "#54B399",
+            "id": "schooner-14500-14556"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16000 TO 16056]",
+              "language": "lucene"
+            },
+            "label": "Knight",
+            "color": "#54B399",
+            "id": "knight-16000-16056"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16500 TO 16556]",
+              "language": "lucene"
+            },
+            "label": "Rider",
+            "color": "#54B399",
+            "id": "rider-16500-16556"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16100 TO 16156]",
+              "language": "lucene"
+            },
+            "label": "Ballista",
+            "color": "#54B399",
+            "id": "ballista-16100-16156"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16600 TO 16656]",
+              "language": "lucene"
+            },
+            "label": "Catapult",
+            "color": "#54B399",
+            "id": "catapult-16600-16656"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16200 TO 16256]",
+              "language": "lucene"
+            },
+            "label": "Wind",
+            "color": "#54B399",
+            "id": "wind-16200-16256"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16700 TO 16756]",
+              "language": "lucene"
+            },
+            "label": "Drill",
+            "color": "#54B399",
+            "id": "drill-16700-16756"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16300 TO 16356]",
+              "language": "lucene"
+            },
+            "label": "Biker",
+            "color": "#54B399",
+            "id": "biker-16300-16356"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16800 TO 16856]",
+              "language": "lucene"
+            },
+            "label": "Venomspiter",
+            "color": "#54B399",
+            "id": "venomspiter-16800-16856"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16400 TO 16456]",
+              "language": "lucene"
+            },
+            "label": "Caravel",
+            "color": "#54B399",
+            "id": "caravel-16400-16456"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16900 TO 16956]",
+              "language": "lucene"
+            },
+            "label": "Galleon",
+            "color": "#54B399",
+            "id": "galleon-16900-16956"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[19000 TO 19056]",
+              "language": "lucene"
+            },
+            "label": "Healer",
+            "color": "#54B399",
+            "id": "healer-19000-19056"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[19200 TO 19256]",
+              "language": "lucene"
+            },
+            "label": "Necro",
+            "color": "#54B399",
+            "id": "necro-19200-19256"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[19100 TO 19156]",
+              "language": "lucene"
+            },
+            "label": "Sniper",
+            "color": "#54B399",
+            "id": "sniper-19100-19156"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[19300 TO 19356]",
+              "language": "lucene"
+            },
+            "label": "Rocketeer",
+            "color": "#54B399",
+            "id": "rocketeer-19300-19356"
+          }
+        ]
+      },
+      {
+        "id": "4d7fb5f0-f63c-11ee-a999-4533bd37133b",
+        "color": "#68BC00",
+        "split_mode": "filters",
+        "metrics": [
+          {
+            "id": "4d7fb5f1-f63c-11ee-a999-4533bd37133b",
+            "type": "value_count",
+            "field": "s.PriceBaseUsd"
+          },
+          {
+            "id": "9dba8d60-f641-11ee-a999-4533bd37133b",
+            "type": "value_count",
+            "field": "s.OfferType"
+          },
+          {
+            "id": "d44e9150-f641-11ee-a999-4533bd37133b",
+            "type": "calculation",
+            "variables": [
+              {
+                "id": "d66dc7d0-f641-11ee-a999-4533bd37133b",
+                "name": "Billings",
+                "field": "4d7fb5f1-f63c-11ee-a999-4533bd37133b"
+              },
+              {
+                "id": "d8b56de0-f641-11ee-a999-4533bd37133b",
+                "name": "Shows",
+                "field": "9dba8d60-f641-11ee-a999-4533bd37133b"
+              }
+            ],
+            "script": "params.Billings / params.Shows * 100"
+          }
+        ],
+        "separate_axis": 0,
+        "axis_position": "right",
+        "formatter": "number",
+        "chart_type": "line",
+        "line_width": 1,
+        "point_size": 1,
+        "fill": 0.5,
+        "stacked": "none",
+        "label": "Convert",
+        "var_name": "Convert",
+        "filter": {
+          "query": "(Type:OfferGiven) OR (Type:Purchase)",
+          "language": "lucene"
+        },
+        "value_template": "{{value}}%",
+        "split_filters": [
+          {
+            "filter": {
+              "query": "s.OfferId:[11000 TO 11056]",
+              "language": "lucene"
+            },
+            "label": "MixedLight",
+            "color": "#68BC00",
+            "id": "cb7016b0-f63e-11ee-a999-4533bd37133b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11100 TO 11156]",
+              "language": "lucene"
+            },
+            "label": "MixedDark",
+            "color": "#68BC00",
+            "id": "4dba9f40-f640-11ee-a999-4533bd37133b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11200 TO 11256]",
+              "language": "lucene"
+            },
+            "label": "ChestLightDark",
+            "color": "#68BC00",
+            "id": "4e4293f0-f640-11ee-a999-4533bd37133b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11300 TO 11356]",
+              "language": "lucene"
+            },
+            "label": "ChestLight",
+            "color": "#68BC00",
+            "id": "4e753cb0-f640-11ee-a999-4533bd37133b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11400 TO 11456]",
+              "language": "lucene"
+            },
+            "label": "ChestDark",
+            "color": "#68BC00",
+            "id": "4ed62160-f640-11ee-a999-4533bd37133b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11500 TO 11556]",
+              "language": "lucene"
+            },
+            "label": "ChestMagLightDark",
+            "color": "#68BC00",
+            "id": "4f5a93a0-f640-11ee-a999-4533bd37133b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11600 TO 11656]",
+              "language": "lucene"
+            },
+            "label": "ChestMagLight",
+            "color": "#68BC00",
+            "id": "4f9c3080-f640-11ee-a999-4533bd37133b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11700 TO 11756]",
+              "language": "lucene"
+            },
+            "label": "ChestMagDark",
+            "color": "#68BC00",
+            "id": "50322ef0-f640-11ee-a999-4533bd37133b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11800 TO 11890]",
+              "language": "lucene"
+            },
+            "label": "SoftHard",
+            "color": "#68BC00",
+            "id": "058d9e30-0ade-11f0-801b-99e3b4e5776b"
+          },
+          {
+            "filter": {
+              "query": "",
+              "language": "lucene"
+            },
+            "label": "",
+            "color": "#68BC00",
+            "id": "05d57ca0-0ade-11f0-801b-99e3b4e5776b"
+          },
+          {
+            "filter": {
+              "query": "",
+              "language": "lucene"
+            },
+            "label": "",
+            "color": "#68BC00",
+            "id": "061fcc10-0ade-11f0-801b-99e3b4e5776b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13000 TO 13056]",
+              "language": "lucene"
+            },
+            "label": "Worker",
+            "color": "#68BC00",
+            "id": "worker-13000-13056"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13800 TO 13856]",
+              "language": "lucene"
+            },
+            "label": "Slave",
+            "color": "#68BC00",
+            "id": "slave-13800-13856"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13100 TO 13156]",
+              "language": "lucene"
+            },
+            "label": "Swordsman",
+            "color": "#68BC00",
+            "id": "swordsman-13100-13156"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13900 TO 13956]",
+              "language": "lucene"
+            },
+            "label": "Groon",
+            "color": "#68BC00",
+            "id": "groon-13900-13956"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13200 TO 13256]",
+              "language": "lucene"
+            },
+            "label": "Warsmith",
+            "color": "#68BC00",
+            "id": "warsmith-13200-13256"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14000 TO 14056]",
+              "language": "lucene"
+            },
+            "label": "SkArch",
+            "color": "#68BC00",
+            "id": "skarch-14000-14056"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13300 TO 13356]",
+              "language": "lucene"
+            },
+            "label": "Archer",
+            "color": "#68BC00",
+            "id": "archer-13300-13356"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14100 TO 14156]",
+              "language": "lucene"
+            },
+            "label": "Bomber",
+            "color": "#68BC00",
+            "id": "bomber-14100-14156"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13400 TO 13456]",
+              "language": "lucene"
+            },
+            "label": "Copter",
+            "color": "#68BC00",
+            "id": "copter-13400-13456"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14200 TO 14256]",
+              "language": "lucene"
+            },
+            "label": "Aeronaut",
+            "color": "#68BC00",
+            "id": "aeronaut-14200-14256"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13500 TO 13556]",
+              "language": "lucene"
+            },
+            "label": "Guards",
+            "color": "#68BC00",
+            "id": "guards-13500-13556"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14300 TO 14356]",
+              "language": "lucene"
+            },
+            "label": "AxeMaster",
+            "color": "#68BC00",
+            "id": "axemaster-14300-14356"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13600 TO 13656]",
+              "language": "lucene"
+            },
+            "label": "Fox",
+            "color": "#68BC00",
+            "id": "fox-13600-13656"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14400 TO 14456]",
+              "language": "lucene"
+            },
+            "label": "Zombie",
+            "color": "#68BC00",
+            "id": "zombie-14400-14456"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13700 TO 13756]",
+              "language": "lucene"
+            },
+            "label": "Boat",
+            "color": "#68BC00",
+            "id": "boat-13700-13756"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14500 TO 14556]",
+              "language": "lucene"
+            },
+            "label": "Schooner",
+            "color": "#68BC00",
+            "id": "schooner-14500-14556"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16000 TO 16056]",
+              "language": "lucene"
+            },
+            "label": "Knight",
+            "color": "#68BC00",
+            "id": "knight-16000-16056"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16500 TO 16556]",
+              "language": "lucene"
+            },
+            "label": "Rider",
+            "color": "#68BC00",
+            "id": "rider-16500-16556"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16100 TO 16156]",
+              "language": "lucene"
+            },
+            "label": "Ballista",
+            "color": "#68BC00",
+            "id": "ballista-16100-16156"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16600 TO 16656]",
+              "language": "lucene"
+            },
+            "label": "Catapult",
+            "color": "#68BC00",
+            "id": "catapult-16600-16656"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16200 TO 16256]",
+              "language": "lucene"
+            },
+            "label": "Wind",
+            "color": "#68BC00",
+            "id": "wind-16200-16256"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16700 TO 16756]",
+              "language": "lucene"
+            },
+            "label": "Drill",
+            "color": "#68BC00",
+            "id": "drill-16700-16756"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16300 TO 16356]",
+              "language": "lucene"
+            },
+            "label": "Biker",
+            "color": "#68BC00",
+            "id": "biker-16300-16356"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16800 TO 16856]",
+              "language": "lucene"
+            },
+            "label": "Venomspiter",
+            "color": "#68BC00",
+            "id": "venomspiter-16800-16856"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16400 TO 16456]",
+              "language": "lucene"
+            },
+            "label": "Caravel",
+            "color": "#68BC00",
+            "id": "caravel-16400-16456"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16900 TO 16956]",
+              "language": "lucene"
+            },
+            "label": "Galleon",
+            "color": "#68BC00",
+            "id": "galleon-16900-16956"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[19000 TO 19056]",
+              "language": "lucene"
+            },
+            "label": "Healer",
+            "color": "#68BC00",
+            "id": "healer-19000-19056"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[19200 TO 19256]",
+              "language": "lucene"
+            },
+            "label": "Necro",
+            "color": "#68BC00",
+            "id": "necro-19200-19256"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[19100 TO 19156]",
+              "language": "lucene"
+            },
+            "label": "Sniper",
+            "color": "#68BC00",
+            "id": "sniper-19100-19156"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[19300 TO 19356]",
+              "language": "lucene"
+            },
+            "label": "Rocketeer",
+            "color": "#68BC00",
+            "id": "rocketeer-19300-19356"
+          }
+        ]
+      },
+      {
+        "id": "28b09680-f642-11ee-a999-4533bd37133b",
+        "color": "#68BC00",
+        "split_mode": "filters",
+        "metrics": [
+          {
+            "id": "28b0bd90-f642-11ee-a999-4533bd37133b",
+            "type": "sum",
+            "field": "s.PriceBaseUsd"
+          },
+          {
+            "id": "28b0bd92-f642-11ee-a999-4533bd37133b",
+            "type": "value_count",
+            "field": "s.OfferType"
+          },
+          {
+            "id": "28b0bd94-f642-11ee-a999-4533bd37133b",
+            "type": "calculation",
+            "variables": [
+              {
+                "id": "28b0bd91-f642-11ee-a999-4533bd37133b",
+                "name": "USD",
+                "field": "28b0bd90-f642-11ee-a999-4533bd37133b"
+              },
+              {
+                "id": "28b0bd93-f642-11ee-a999-4533bd37133b",
+                "name": "Shows",
+                "field": "28b0bd92-f642-11ee-a999-4533bd37133b"
+              }
+            ],
+            "script": "params.USD / params.Shows"
+          }
+        ],
+        "separate_axis": 0,
+        "axis_position": "right",
+        "formatter": "number",
+        "chart_type": "line",
+        "line_width": 1,
+        "point_size": 1,
+        "fill": 0.5,
+        "stacked": "none",
+        "label": "ShowUsd",
+        "var_name": "ShowUsd",
+        "filter": {
+          "query": "(Type:OfferGiven) OR (Type:Purchase)",
+          "language": "lucene"
+        },
+        "value_template": "${{value}}",
+        "split_filters": [
+          {
+            "filter": {
+              "query": "s.OfferId:[11000 TO 11056]",
+              "language": "lucene"
+            },
+            "label": "MixedLight",
+            "color": "#68BC00",
+            "id": "cb7016b0-f63e-11ee-a999-4533bd37133b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11100 TO 11156]",
+              "language": "lucene"
+            },
+            "label": "MixedDark",
+            "color": "#68BC00",
+            "id": "4dba9f40-f640-11ee-a999-4533bd37133b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11200 TO 11256]",
+              "language": "lucene"
+            },
+            "label": "ChestLightDark",
+            "color": "#68BC00",
+            "id": "4e4293f0-f640-11ee-a999-4533bd37133b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11300 TO 11356]",
+              "language": "lucene"
+            },
+            "label": "ChestLight",
+            "color": "#68BC00",
+            "id": "4e753cb0-f640-11ee-a999-4533bd37133b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11400 TO 11456]",
+              "language": "lucene"
+            },
+            "label": "ChestDark",
+            "color": "#68BC00",
+            "id": "4ed62160-f640-11ee-a999-4533bd37133b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11500 TO 11556]",
+              "language": "lucene"
+            },
+            "label": "ChestMagLightDark",
+            "color": "#68BC00",
+            "id": "4f5a93a0-f640-11ee-a999-4533bd37133b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11600 TO 11656]",
+              "language": "lucene"
+            },
+            "label": "ChestMagLight",
+            "color": "#68BC00",
+            "id": "4f9c3080-f640-11ee-a999-4533bd37133b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11700 TO 11756]",
+              "language": "lucene"
+            },
+            "label": "ChestMagDark",
+            "color": "#68BC00",
+            "id": "50322ef0-f640-11ee-a999-4533bd37133b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11800 TO 11890]",
+              "language": "lucene"
+            },
+            "label": "SoftHard",
+            "color": "#68BC00",
+            "id": "08d63980-0ade-11f0-801b-99e3b4e5776b"
+          },
+          {
+            "filter": {
+              "query": "",
+              "language": "lucene"
+            },
+            "label": "",
+            "color": "#68BC00",
+            "id": "09239630-0ade-11f0-801b-99e3b4e5776b"
+          },
+          {
+            "filter": {
+              "query": "",
+              "language": "lucene"
+            },
+            "label": "",
+            "color": "#68BC00",
+            "id": "097056a0-0ade-11f0-801b-99e3b4e5776b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13000 TO 13056]",
+              "language": "lucene"
+            },
+            "label": "Worker",
+            "color": "#68BC00",
+            "id": "worker-13000-13056"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13800 TO 13856]",
+              "language": "lucene"
+            },
+            "label": "Slave",
+            "color": "#68BC00",
+            "id": "slave-13800-13856"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13100 TO 13156]",
+              "language": "lucene"
+            },
+            "label": "Swordsman",
+            "color": "#68BC00",
+            "id": "swordsman-13100-13156"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13900 TO 13956]",
+              "language": "lucene"
+            },
+            "label": "Groon",
+            "color": "#68BC00",
+            "id": "groon-13900-13956"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13200 TO 13256]",
+              "language": "lucene"
+            },
+            "label": "Warsmith",
+            "color": "#68BC00",
+            "id": "warsmith-13200-13256"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14000 TO 14056]",
+              "language": "lucene"
+            },
+            "label": "SkArch",
+            "color": "#68BC00",
+            "id": "skarch-14000-14056"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13300 TO 13356]",
+              "language": "lucene"
+            },
+            "label": "Archer",
+            "color": "#68BC00",
+            "id": "archer-13300-13356"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14100 TO 14156]",
+              "language": "lucene"
+            },
+            "label": "Bomber",
+            "color": "#68BC00",
+            "id": "bomber-14100-14156"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13400 TO 13456]",
+              "language": "lucene"
+            },
+            "label": "Copter",
+            "color": "#68BC00",
+            "id": "copter-13400-13456"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14200 TO 14256]",
+              "language": "lucene"
+            },
+            "label": "Aeronaut",
+            "color": "#68BC00",
+            "id": "aeronaut-14200-14256"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13500 TO 13556]",
+              "language": "lucene"
+            },
+            "label": "Guards",
+            "color": "#68BC00",
+            "id": "guards-13500-13556"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14300 TO 14356]",
+              "language": "lucene"
+            },
+            "label": "AxeMaster",
+            "color": "#68BC00",
+            "id": "axemaster-14300-14356"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13600 TO 13656]",
+              "language": "lucene"
+            },
+            "label": "Fox",
+            "color": "#68BC00",
+            "id": "fox-13600-13656"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14400 TO 14456]",
+              "language": "lucene"
+            },
+            "label": "Zombie",
+            "color": "#68BC00",
+            "id": "zombie-14400-14456"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13700 TO 13756]",
+              "language": "lucene"
+            },
+            "label": "Boat",
+            "color": "#68BC00",
+            "id": "boat-13700-13756"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14500 TO 14556]",
+              "language": "lucene"
+            },
+            "label": "Schooner",
+            "color": "#68BC00",
+            "id": "schooner-14500-14556"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16000 TO 16056]",
+              "language": "lucene"
+            },
+            "label": "Knight",
+            "color": "#68BC00",
+            "id": "knight-16000-16056"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16500 TO 16556]",
+              "language": "lucene"
+            },
+            "label": "Rider",
+            "color": "#68BC00",
+            "id": "rider-16500-16556"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16100 TO 16156]",
+              "language": "lucene"
+            },
+            "label": "Ballista",
+            "color": "#68BC00",
+            "id": "ballista-16100-16156"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16600 TO 16656]",
+              "language": "lucene"
+            },
+            "label": "Catapult",
+            "color": "#68BC00",
+            "id": "catapult-16600-16656"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16200 TO 16256]",
+              "language": "lucene"
+            },
+            "label": "Wind",
+            "color": "#68BC00",
+            "id": "wind-16200-16256"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16700 TO 16756]",
+              "language": "lucene"
+            },
+            "label": "Drill",
+            "color": "#68BC00",
+            "id": "drill-16700-16756"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16300 TO 16356]",
+              "language": "lucene"
+            },
+            "label": "Biker",
+            "color": "#68BC00",
+            "id": "biker-16300-16356"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16800 TO 16856]",
+              "language": "lucene"
+            },
+            "label": "Venomspiter",
+            "color": "#68BC00",
+            "id": "venomspiter-16800-16856"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16400 TO 16456]",
+              "language": "lucene"
+            },
+            "label": "Caravel",
+            "color": "#68BC00",
+            "id": "caravel-16400-16456"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16900 TO 16956]",
+              "language": "lucene"
+            },
+            "label": "Galleon",
+            "color": "#68BC00",
+            "id": "galleon-16900-16956"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[19000 TO 19056]",
+              "language": "lucene"
+            },
+            "label": "Healer",
+            "color": "#68BC00",
+            "id": "healer-19000-19056"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[19200 TO 19256]",
+              "language": "lucene"
+            },
+            "label": "Necro",
+            "color": "#68BC00",
+            "id": "necro-19200-19256"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[19100 TO 19156]",
+              "language": "lucene"
+            },
+            "label": "Sniper",
+            "color": "#68BC00",
+            "id": "sniper-19100-19156"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[19300 TO 19356]",
+              "language": "lucene"
+            },
+            "label": "Rocketeer",
+            "color": "#68BC00",
+            "id": "rocketeer-19300-19356"
+          }
+        ]
+      },
+      {
+        "id": "656343b0-f643-11ee-a999-4533bd37133b",
+        "color": "#68BC00",
+        "split_mode": "filters",
+        "metrics": [
+          {
+            "id": "656343b1-f643-11ee-a999-4533bd37133b",
+            "type": "sum",
+            "field": "s.PriceBaseUsd"
+          },
+          {
+            "id": "656343b3-f643-11ee-a999-4533bd37133b",
+            "type": "count",
+            "field": "s.OfferType"
+          },
+          {
+            "id": "656343b5-f643-11ee-a999-4533bd37133b",
+            "type": "calculation",
+            "variables": [
+              {
+                "id": "656343b2-f643-11ee-a999-4533bd37133b",
+                "name": "USD",
+                "field": "656343b1-f643-11ee-a999-4533bd37133b"
+              },
+              {
+                "id": "656343b4-f643-11ee-a999-4533bd37133b",
+                "name": "Billings",
+                "field": "656343b3-f643-11ee-a999-4533bd37133b"
+              }
+            ],
+            "script": "params.USD / params.Billings"
+          }
+        ],
+        "separate_axis": 0,
+        "axis_position": "right",
+        "formatter": "number",
+        "chart_type": "line",
+        "line_width": 1,
+        "point_size": 1,
+        "fill": 0.5,
+        "stacked": "none",
+        "label": "AvgUsd",
+        "var_name": "AvgUsd",
+        "filter": {
+          "query": "Type:Purchase",
+          "language": "lucene"
+        },
+        "value_template": "${{value}}",
+        "split_filters": [
+          {
+            "filter": {
+              "query": "s.OfferId:[11000 TO 11056]",
+              "language": "lucene"
+            },
+            "label": "MixedLight",
+            "color": "#68BC00",
+            "id": "cb7016b0-f63e-11ee-a999-4533bd37133b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11100 TO 11156]",
+              "language": "lucene"
+            },
+            "label": "MixedDark",
+            "color": "#68BC00",
+            "id": "4dba9f40-f640-11ee-a999-4533bd37133b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11200 TO 11256]",
+              "language": "lucene"
+            },
+            "label": "ChestLightDark",
+            "color": "#68BC00",
+            "id": "4e4293f0-f640-11ee-a999-4533bd37133b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11300 TO 11356]",
+              "language": "lucene"
+            },
+            "label": "ChestLight",
+            "color": "#68BC00",
+            "id": "4e753cb0-f640-11ee-a999-4533bd37133b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11400 TO 11456]",
+              "language": "lucene"
+            },
+            "label": "ChestDark",
+            "color": "#68BC00",
+            "id": "4ed62160-f640-11ee-a999-4533bd37133b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11500 TO 11556]",
+              "language": "lucene"
+            },
+            "label": "ChestMagLightDark",
+            "color": "#68BC00",
+            "id": "4f5a93a0-f640-11ee-a999-4533bd37133b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11600 TO 11656]",
+              "language": "lucene"
+            },
+            "label": "ChestMagLight",
+            "color": "#68BC00",
+            "id": "4f9c3080-f640-11ee-a999-4533bd37133b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11700 TO 11756]",
+              "language": "lucene"
+            },
+            "label": "ChestMagDark",
+            "color": "#68BC00",
+            "id": "50322ef0-f640-11ee-a999-4533bd37133b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[11800 TO 11890]",
+              "language": "lucene"
+            },
+            "label": "SoftHard",
+            "color": "#68BC00",
+            "id": "0b6807f0-0ade-11f0-801b-99e3b4e5776b"
+          },
+          {
+            "filter": {
+              "query": "",
+              "language": "lucene"
+            },
+            "label": "",
+            "color": "#68BC00",
+            "id": "0bb69d20-0ade-11f0-801b-99e3b4e5776b"
+          },
+          {
+            "filter": {
+              "query": "",
+              "language": "lucene"
+            },
+            "label": "",
+            "color": "#68BC00",
+            "id": "0cdbbc30-0ade-11f0-801b-99e3b4e5776b"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13000 TO 13056]",
+              "language": "lucene"
+            },
+            "label": "Worker",
+            "color": "#68BC00",
+            "id": "worker-13000-13056"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13800 TO 13856]",
+              "language": "lucene"
+            },
+            "label": "Slave",
+            "color": "#68BC00",
+            "id": "slave-13800-13856"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13100 TO 13156]",
+              "language": "lucene"
+            },
+            "label": "Swordsman",
+            "color": "#68BC00",
+            "id": "swordsman-13100-13156"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13900 TO 13956]",
+              "language": "lucene"
+            },
+            "label": "Groon",
+            "color": "#68BC00",
+            "id": "groon-13900-13956"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13200 TO 13256]",
+              "language": "lucene"
+            },
+            "label": "Warsmith",
+            "color": "#68BC00",
+            "id": "warsmith-13200-13256"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14000 TO 14056]",
+              "language": "lucene"
+            },
+            "label": "SkArch",
+            "color": "#68BC00",
+            "id": "skarch-14000-14056"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13300 TO 13356]",
+              "language": "lucene"
+            },
+            "label": "Archer",
+            "color": "#68BC00",
+            "id": "archer-13300-13356"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14100 TO 14156]",
+              "language": "lucene"
+            },
+            "label": "Bomber",
+            "color": "#68BC00",
+            "id": "bomber-14100-14156"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13400 TO 13456]",
+              "language": "lucene"
+            },
+            "label": "Copter",
+            "color": "#68BC00",
+            "id": "copter-13400-13456"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14200 TO 14256]",
+              "language": "lucene"
+            },
+            "label": "Aeronaut",
+            "color": "#68BC00",
+            "id": "aeronaut-14200-14256"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13500 TO 13556]",
+              "language": "lucene"
+            },
+            "label": "Guards",
+            "color": "#68BC00",
+            "id": "guards-13500-13556"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14300 TO 14356]",
+              "language": "lucene"
+            },
+            "label": "AxeMaster",
+            "color": "#68BC00",
+            "id": "axemaster-14300-14356"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13600 TO 13656]",
+              "language": "lucene"
+            },
+            "label": "Fox",
+            "color": "#68BC00",
+            "id": "fox-13600-13656"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14400 TO 14456]",
+              "language": "lucene"
+            },
+            "label": "Zombie",
+            "color": "#68BC00",
+            "id": "zombie-14400-14456"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[13700 TO 13756]",
+              "language": "lucene"
+            },
+            "label": "Boat",
+            "color": "#68BC00",
+            "id": "boat-13700-13756"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[14500 TO 14556]",
+              "language": "lucene"
+            },
+            "label": "Schooner",
+            "color": "#68BC00",
+            "id": "schooner-14500-14556"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16000 TO 16056]",
+              "language": "lucene"
+            },
+            "label": "Knight",
+            "color": "#68BC00",
+            "id": "knight-16000-16056"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16500 TO 16556]",
+              "language": "lucene"
+            },
+            "label": "Rider",
+            "color": "#68BC00",
+            "id": "rider-16500-16556"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16100 TO 16156]",
+              "language": "lucene"
+            },
+            "label": "Ballista",
+            "color": "#68BC00",
+            "id": "ballista-16100-16156"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16600 TO 16656]",
+              "language": "lucene"
+            },
+            "label": "Catapult",
+            "color": "#68BC00",
+            "id": "catapult-16600-16656"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16200 TO 16256]",
+              "language": "lucene"
+            },
+            "label": "Wind",
+            "color": "#68BC00",
+            "id": "wind-16200-16256"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16700 TO 16756]",
+              "language": "lucene"
+            },
+            "label": "Drill",
+            "color": "#68BC00",
+            "id": "drill-16700-16756"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16300 TO 16356]",
+              "language": "lucene"
+            },
+            "label": "Biker",
+            "color": "#68BC00",
+            "id": "biker-16300-16356"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16800 TO 16856]",
+              "language": "lucene"
+            },
+            "label": "Venomspiter",
+            "color": "#68BC00",
+            "id": "venomspiter-16800-16856"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16400 TO 16456]",
+              "language": "lucene"
+            },
+            "label": "Caravel",
+            "color": "#68BC00",
+            "id": "caravel-16400-16456"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[16900 TO 16956]",
+              "language": "lucene"
+            },
+            "label": "Galleon",
+            "color": "#68BC00",
+            "id": "galleon-16900-16956"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[19000 TO 19056]",
+              "language": "lucene"
+            },
+            "label": "Healer",
+            "color": "#68BC00",
+            "id": "healer-19000-19056"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[19200 TO 19256]",
+              "language": "lucene"
+            },
+            "label": "Necro",
+            "color": "#68BC00",
+            "id": "necro-19200-19256"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[19100 TO 19156]",
+              "language": "lucene"
+            },
+            "label": "Sniper",
+            "color": "#68BC00",
+            "id": "sniper-19100-19156"
+          },
+          {
+            "filter": {
+              "query": "s.OfferId:[19300 TO 19356]",
+              "language": "lucene"
+            },
+            "label": "Rocketeer",
+            "color": "#68BC00",
+            "id": "rocketeer-19300-19356"
+          }
+        ]
+      }
+    ],
+    "time_field": "Time",
+    "index_pattern": "events.meta.*",
+    "interval": "1y",
+    "axis_position": "left",
+    "axis_formatter": "number",
+    "axis_scale": "normal",
+    "show_legend": 1,
+    "show_grid": 1,
+    "tooltip_mode": "show_all",
+    "default_index_pattern": "opensearch_dashboards_sample_data_flights",
+    "default_timefield": "timestamp",
+    "isModelInvalid": false,
+    "drop_last_bucket": 0,
+    "markdown_less": "tr, th, td {\r\n    font-size: 0.93em;\r\n    line-height: 3em;\r\n}",
+    "markdown_css": "#markdown-61ca57f0-469d-11e7-af02-69e470af7417 tr,#markdown-61ca57f0-469d-11e7-af02-69e470af7417 th,#markdown-61ca57f0-469d-11e7-af02-69e470af7417 td{font-size:.93em;line-height:3em}",
+    "filter": {
+      "query": "fort.cluster:stable",
+      "language": "lucene"
+    },
+    "bar_color_rules": [
+      {
+        "id": "9a962f40-f5ba-11ee-bccf-65f164ff78f5"
+      }
+    ],
+    "gauge_color_rules": [
+      {
+        "id": "9b55d5c0-f5ba-11ee-bccf-65f164ff78f5"
+      }
+    ],
+    "gauge_width": 10,
+    "gauge_inner_width": 10,
+    "gauge_style": "half",
+    "background_color_rules": [
+      {
+        "id": "9e282fa0-f5ba-11ee-bccf-65f164ff78f5"
+      }
+    ],
+    "markdown": "|AggTags|{{#each mixed_light}} {{#if last}} {{@key}} | {{/if}} {{/each}} \r\n|:-------|{{#each mixed_light}}{{#if last}}-:| {{/if}} {{/each}} \r\n{{#each _all}} \r\n|{{@key}}| {{#each this}} {{#if last}}   {{this.last.formatted}}| {{/if}}  {{/each}} \r\n{{/each}}\r\n\r\n\r\n"
+  }
+}

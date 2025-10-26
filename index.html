@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page.title">Product Analyst / Analytics Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="theme-analytics" data-lang="ru">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand" data-i18n="nav.brand">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#about" data-i18n="nav.about">О себе</a></li>
+                <li><a href="#skills" data-i18n="nav.skills">Навыки</a></li>
+                <li><a href="#experience" data-i18n="nav.experience">Опыт</a></li>
+                <li><a href="#education" data-i18n="nav.education">Образование</a></li>
+                <li><a href="#publications" data-i18n="nav.publications">Публикации</a></li>
+                <li><a href="#projects" data-i18n="nav.projects">Проекты</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Контакты</a></li>
+            </ul>
+            <div class="navbar-controls">
+                <!-- Theme Toggle Button -->
+                <div class="theme-toggle-wrapper">
+                    <button class="theme-toggle-navbar" id="themeToggle" aria-label="Switch theme">
+                        <span class="toggle-icon analytics-icon">📊</span>
+                        <span class="toggle-icon engineering-icon">💻</span>
+                    </button>
+                    <!-- Tooltip -->
+                    <div class="theme-tooltip" id="themeTooltip">
+                        <div class="tooltip-content">
+                            <span class="tooltip-text analytics-text" data-i18n="nav.tooltip.analytics">
+                                Показать проекты по продуктовой аналитике
+                            </span>
+                            <span class="tooltip-text engineering-text" data-i18n="nav.tooltip.engineering">
+                                Показать инженерные и AI проекты
+                            </span>
+                        </div>
+                        <div class="tooltip-arrow"></div>
+                    </div>
+                </div>
+                <!-- Language Toggle -->
+                <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+                    <span class="lang-option active" data-lang="ru">RU</span>
+                    <span class="lang-separator">/</span>
+                    <span class="lang-option" data-lang="en">EN</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="greeting" data-i18n="hero.greeting">Привет, я</span>
+                    <span class="name" data-i18n="hero.name">Руслан Ахметзянов</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    <span class="role-analytics" data-i18n="hero.roleAnalytics">Product Analyst</span>
+                    <span class="role-separator">/</span>
+                    <span class="role-engineering" data-i18n="hero.roleEngineering">Analytics Engineer</span>
+                </h2>
+                <p class="hero-description">
+                    <span class="description-analytics" data-i18n="hero.descAnalytics">
+                        Превращаю данные в инсайты, которые двигают продукт вперед
+                    </span>
+                    <span class="description-engineering" data-i18n="hero.descEngineering">
+                        Строю масштабируемые data-решения с использованием ML и AI
+                    </span>
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary" data-i18n="hero.btnProjects">Мои проекты</a>
+                    <a href="#contact" class="btn btn-secondary" data-i18n="hero.btnContact">Связаться</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="visual-circle"></div>
+                <div class="visual-data"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="about.title">О себе</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-i18n="about.p1">
+                        <strong class="analytics-highlight">Как Product Analyst,</strong> я специализируюсь на анализе пользовательского поведения, 
+                        A/B тестировании и создании дашбордов, которые помогают командам принимать 
+                        обоснованные решения.
+                    </p>
+                    <p data-i18n="about.p2">
+                        <strong class="engineering-highlight">Как Analytics Engineer,</strong> я создаю надежные data pipeline, 
+                        разрабатываю ML-модели и внедряю AI-решения для автоматизации 
+                        аналитических процессов.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">3+</div>
+                            <div class="stat-label" data-i18n="about.stat1">года опыта</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100+</div>
+                            <div class="stat-label" data-i18n="about.stat2">аналитических исследований</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label" data-i18n="about.stat3">автоматизированных отчётов / ETL-процессов</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="skills.title">Навыки</h2>
+            <div class="skills-grid">
+                <!-- Analytics Skills -->
+                <div class="skill-category analytics-category">
+                    <h3 class="category-title" data-i18n="skills.analyticsCategory">Продуктовая аналитика</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">SQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python (Pandas, NumPy)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Tableau / Power BI</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">A/B Testing</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Google Analytics / Amplitude</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 82%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Engineering Skills -->
+                <div class="skill-category engineering-category">
+                    <h3 class="category-title" data-i18n="skills.engineeringCategory">Инженерия и ML</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Python (Advanced)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">ML (scikit-learn, TensorFlow)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Data Engineering (Airflow, dbt)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Cloud (AWS, GCP)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 78%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">LLM & AI</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 83%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="experience.title">Опыт работы</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date" data-i18n="experience.job1.date">03/2024 – Present</div>
+                        <h3 class="timeline-title" data-i18n="experience.job1.title">Data Analyst</h3>
+                        <div class="timeline-company" data-i18n="experience.job1.company">Gear Games</div>
+                        <div class="timeline-achievements">
+                            <div class="achievement-item achievement-item-default">
+                                <span class="achievement-triangle"></span>
+                                <span class="achievement-text">Automated data workflows for real-time analytics</span>
+                            </div>
+                            <div class="achievement-item achievement-item-default">
+                                <span class="achievement-triangle"></span>
+                                <span class="achievement-text">Built comprehensive retention analytics dashboard</span>
+                            </div>
+                            <div class="achievement-item achievement-item-default">
+                                <span class="achievement-triangle"></span>
+                                <span class="achievement-text">Created player segmentation via ML clustering</span>
+                            </div>
+                            <div class="timeline-expand-indicator">
+                                <div class="expand-line"></div>
+                            </div>
+                            <div class="achievement-item">
+                                <span class="achievement-triangle"></span>
+                                <span class="achievement-text">Improved data processing speed by 40%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date" data-i18n="experience.job2.date">10/2022 – 01/2024 (удалённо)</div>
+                        <h3 class="timeline-title" data-i18n="experience.job2.title">Fullstack Analyst</h3>
+                        <div class="timeline-company" data-i18n="experience.job2.company">Quant Shark Technologies (стартап)</div>
+                        <div class="timeline-achievements">
+                            <div class="achievement-item achievement-item-default">
+                                <span class="achievement-triangle"></span>
+                                <span class="achievement-text" data-i18n="experience.job2.desc">Разработал и внедрил архитектуру системы бэктестов для тестирования криптотрейдинговых стратегий на исторических данных</span>
+                            </div>
+                            <div class="achievement-item achievement-item-default">
+                                <span class="achievement-triangle"></span>
+                                <span class="achievement-text" data-i18n="experience.job2.desc2">Создал и автоматизировал новостную торговую стратегию, открывающую длинные позиции на вторичных биржах сразу после появления новостей о листинге токена на Binance — с автоматическим парсингом новостей и интеграцией с API бирж</span>
+                            </div>
+                            <div class="achievement-item achievement-item-default">
+                                <span class="achievement-triangle"></span>
+                                <span class="achievement-text" data-i18n="experience.job2.desc3">Исследовал, построил и протестировал стратегию статистического арбитража с динамическим окном переобучения на основе научных публикаций</span>
+                            </div>
+                            <div class="timeline-expand-indicator">
+                                <div class="expand-line"></div>
+                            </div>
+                            <div class="achievement-item">
+                                <span class="achievement-triangle"></span>
+                                <span class="achievement-text" data-i18n="experience.job2.desc4">Настроил и поддерживал инфраструктуру для автоматизированной торговли на выделенном сервере Ubuntu, обеспечив стабильное выполнение и мониторинг стратегий</span>
+                            </div>
+                            <div class="achievement-item">
+                                <span class="achievement-triangle"></span>
+                                <span class="achievement-text" data-i18n="experience.job2.desc5">Подготовил технические спецификации и архитектурную документацию для системы бэктестов, использовавшиеся разработчиками для дальнейшего расширения проекта</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date" data-i18n="experience.job3.date">06/2022 – 09/2022</div>
+                        <h3 class="timeline-title" data-i18n="experience.job3.title">Junior ML&AI Researcher</h3>
+                        <div class="timeline-company" data-i18n="experience.job3.company">ООО «НИИгазэкономика»</div>
+                        <div class="timeline-achievements">
+                            <div class="achievement-item achievement-item-default">
+                                <span class="achievement-triangle"></span>
+                                <span class="achievement-text" data-i18n="experience.job3.desc">Решал задачи в области детекции аномалий временных рядов (ML, AI)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="education.title">Образование</h2>
+            <div class="education-grid">
+                <div class="education-item">
+                    <div class="education-degree" data-i18n="education.degree1">Applied Mathematics, Gubkin University (B.Sc.)</div>
+                </div>
+                <div class="education-item">
+                    <div class="education-degree" data-i18n="education.degree2">Translator in Professional Communication</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="section publications-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="publications.title">Публикации</h2>
+            <div class="publications-grid">
+                <div class="publication-item">
+                    <div class="publication-links">
+                        <a href="#" class="publication-link" data-i18n="publications.researchgate">ResearchGate</a>
+                        <span class="publication-separator">/</span>
+                        <a href="#" class="publication-link" data-i18n="publications.conferences">Конференции</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="projects.title">Проекты</h2>
+            <div class="projects-grid">
+                <!-- Analytics Projects -->
+                <div class="project-card analytics-project">
+                    <div class="project-icon">📊</div>
+                    <h3 class="project-title" data-i18n="projects.project1.title">Анализ поведения пользователей</h3>
+                    <p class="project-description" data-i18n="projects.project1.description">
+                        Комплексный анализ поведения пользователей с использованием cohort analysis 
+                        и retention метрик. Результат - увеличение удержания на 30%.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">SQL</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Tableau</span>
+                    </div>
+                </div>
+
+                <div class="project-card analytics-project">
+                    <div class="project-icon">🎯</div>
+                    <h3 class="project-title" data-i18n="projects.project2.title">Фреймворк A/B тестирования</h3>
+                    <p class="project-description" data-i18n="projects.project2.description">
+                        Разработка фреймворка для проведения и анализа A/B тестов с автоматическим 
+                        расчетом статистической значимости.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Statistics</span>
+                        <span class="tag">Power BI</span>
+                    </div>
+                </div>
+
+                <!-- Engineering Projects -->
+                <div class="project-card engineering-project">
+                    <div class="project-icon">🤖</div>
+                    <h3 class="project-title" data-i18n="projects.project3.title">Модель прогнозирования оттока</h3>
+                    <p class="project-description" data-i18n="projects.project3.description">
+                        ML-модель для прогнозирования оттока пользователей с точностью 87%. 
+                        Интеграция с production pipeline через API.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">ML</span>
+                        <span class="tag">AWS</span>
+                    </div>
+                </div>
+
+                <div class="project-card engineering-project">
+                    <div class="project-icon">⚙️</div>
+                    <h3 class="project-title" data-i18n="projects.project4.title">Автоматизация Data Pipeline</h3>
+                    <p class="project-description" data-i18n="projects.project4.description">
+                        Построение автоматизированного ETL pipeline с использованием Airflow и dbt 
+                        для обработки данных в реальном времени.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Airflow</span>
+                        <span class="tag">dbt</span>
+                        <span class="tag">PostgreSQL</span>
+                    </div>
+                </div>
+
+                <div class="project-card engineering-project">
+                    <div class="project-icon">🧠</div>
+                    <h3 class="project-title" data-i18n="projects.project5.title">AI-помощник для аналитики</h3>
+                    <p class="project-description" data-i18n="projects.project5.description">
+                        Разработка чат-бота на базе LLM для автоматического ответа на аналитические 
+                        вопросы и генерации SQL запросов.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">OpenAI</span>
+                        <span class="tag">LangChain</span>
+                        <span class="tag">Python</span>
+                    </div>
+                </div>
+
+                <div class="project-card analytics-project">
+                    <div class="project-icon">📈</div>
+                    <h3 class="project-title" data-i18n="projects.project6.title">Дашборд доходов</h3>
+                    <p class="project-description" data-i18n="projects.project6.description">
+                        Интерактивный дашборд для отслеживания revenue метрик в реальном времени 
+                        с drill-down функциональностью.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Power BI</span>
+                        <span class="tag">DAX</span>
+                        <span class="tag">SQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="contact.title">Связаться со мной</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="contact-text" data-i18n="contact.text">
+                        Открыт для интересных проектов и предложений о сотрудничестве
+                    </p>
+                    <div class="contact-links">
+                        <a href="mailto:your.email@example.com" class="contact-link">
+                            <span class="link-icon">📧</span>
+                            <span class="link-text" data-i18n="contact.email">your.email@example.com</span>
+                        </a>
+                        <a href="https://linkedin.com/in/yourprofile" class="contact-link" target="_blank">
+                            <span class="link-icon">💼</span>
+                            <span class="link-text" data-i18n="contact.linkedin">LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/yourprofile" class="contact-link" target="_blank">
+                            <span class="link-icon">💻</span>
+                            <span class="link-text" data-i18n="contact.github">GitHub</span>
+                        </a>
+                        <a href="https://t.me/yourprofile" class="contact-link" target="_blank">
+                            <span class="link-icon">✈️</span>
+                            <span class="link-text" data-i18n="contact.telegram">Telegram</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="footer.copyright">&copy; 2025 Руслан Ахметзянов. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
