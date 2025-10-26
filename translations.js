@@ -47,7 +47,15 @@ const translations = {
                 date: "03/2024 – Present",
                 title: "Data Analyst",
                 company: "Gear Games",
-                desc: "Automated data workflows, built retention analytics, created player segmentation via clustering"
+                desc: "Automated data workflows, built retention analytics, created player segmentation via clustering",
+                desc1: "Проведение глубоких аналитических исследований. Повысил Retention-1d на 30%, завершил 10+ успешных AB-тестов",
+                desc2: "Улучшение аналитических Python-библиотек. Создал многопоточную выгрузку данных, ускорив загрузку в 50+ раз",
+                desc3: "Создание ML-кластеризации входящего трафика. Достоверная разметка игроков по 1-му дню жизни в игре для маркетинга и монетизации. Сократил расходы на закупку трафика, повысил точность таргетинговой системы офферов",
+                desc4: "Автоматизация отчётности и ETL-процессы. Разработал отчёт по ретеншену, отчёт по основным метрикам и многие др.",
+                desc5: "Развитие AI, LLM, MCP. Создал ai-инцидент менеджера, ассистента по заведению задач, MCP YoutTrack, MCP OpenSearch",
+                desc6: "Создание дашбордов, схем ивентов и алертинга в реальном времени на базе OpenSearch/ElasticSearch",
+                desc7: "Активное участие в жизни компании, разработка системы прогнозов для внутреннего турнира",
+                desc8: "Исполнение обязанностей тимлида команды разработки и техлида отдела аналитики: проведение дейликов, планирование спринтов, координация работы кросс-функциональной команды из 10 человек, выпуск фичей"
             },
             job2: {
                 date: "10/2022 – 01/2024 (удалённо)",
@@ -159,10 +167,18 @@ const translations = {
         experience: {
             title: "Work Experience",
             job1: {
-                date: "2023 - Present",
-                title: "Senior Product Analyst",
-                company: "Tech Company Inc.",
-                desc: "Developed and implemented metrics system for tracking key product KPIs"
+                date: "03/2024 – Present",
+                title: "Data Analyst",
+                company: "Gear Games",
+                desc: "Automated data workflows, built retention analytics, created player segmentation via clustering",
+                desc1: "Conducted deep analytical research. Improved Retention-1d by 30%, completed 10+ successful AB-tests",
+                desc2: "Enhanced analytical Python libraries. Created multi-threaded data export, accelerated loading by 50+ times",
+                desc3: "Created ML clustering for incoming traffic. Accurate player labeling by 1st day of life in-game for marketing and monetization. Reduced traffic acquisition costs, improved targeting system accuracy for offers",
+                desc4: "Report automation and ETL processes. Developed retention report, key metrics report and many others",
+                desc5: "AI, LLM, MCP development. Created AI incident manager, task creation assistant, MCP YouTrack, MCP OpenSearch",
+                desc6: "Created dashboards, event schemas and real-time alerting based on OpenSearch/ElasticSearch",
+                desc7: "Active participation in company life, developed forecasting system for internal tournament",
+                desc8: "Execution of team lead responsibilities for development team and tech lead for analytics department: conducted daily standups, sprint planning, coordinated work of cross-functional team of 10 people, released features"
             },
             job2: {
                 date: "10/2022 – 01/2024 (Remote)",
