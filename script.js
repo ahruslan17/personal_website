@@ -682,6 +682,24 @@ class StackToolManager {
             });
         });
         
+        // Add click handlers for category cards
+        const categoryCards = document.querySelectorAll('.stack-category-card');
+        categoryCards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                // Don't switch theme if clicking on tool cards inside
+                if (e.target.closest('.stack-tool-card')) {
+                    return;
+                }
+                
+                const category = card.getAttribute('data-category');
+                if (category === 'analytics') {
+                    window.themeManager.setTheme('theme-analytics');
+                } else if (category === 'engineering') {
+                    window.themeManager.setTheme('theme-engineering');
+                }
+            });
+        });
+        
         // Initialize visibility based on current theme
         this.updateStackVisibility();
         

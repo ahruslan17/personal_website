@@ -239,23 +239,12 @@
             
             <div class="stack-categories-wrapper">
                 <!-- Analytics Stack -->
-                <div class="stack-category-card analytics-stack">
+                <div class="stack-category-card analytics-stack" data-category="analytics">
                     <h3 class="stack-category-title" data-i18n="stack.analytics.title">Продуктовая аналитика</h3>
                     <div class="stack-grid">
-                        <div class="stack-tool-card" data-tool="sql">
-                            <div class="tool-header">
-                                <span class="tool-name">SQL</span>
-                                <span class="tool-toggle">+</span>
-                            </div>
-                            <div class="tool-description">
-                                <p data-i18n="stack.analytics.sql.desc">Продвинутый уровень: сложные запросы, оптимизация, оконные функции. Работа с миллиардами строк данных.</p>
-                                <div class="tool-level" data-i18n="stack.analytics.sql.level">Уровень: Продвинутый</div>
-                            </div>
-                        </div>
-
                         <div class="stack-tool-card" data-tool="python">
                             <div class="tool-header">
-                                <span class="tool-name">Python (Pandas, NumPy)</span>
+                                <span class="tool-name">Python (pandas, numpy, scipy, matplotlib, seaborn)</span>
                                 <span class="tool-toggle">+</span>
                             </div>
                             <div class="tool-description">
@@ -266,18 +255,29 @@
 
                         <div class="stack-tool-card" data-tool="tableau">
                             <div class="tool-header">
-                                <span class="tool-name">Tableau / Power BI</span>
+                                <span class="tool-name">Jupyter / Google Colab</span>
                                 <span class="tool-toggle">+</span>
                             </div>
                             <div class="tool-description">
-                                <p data-i18n="stack.analytics.tableau.desc">Средний уровень: создание дашбордов, сложные вычисления, интеграция с различными источниками данных.</p>
-                                <div class="tool-level" data-i18n="stack.analytics.tableau.level">Уровень: Средний</div>
+                                <p data-i18n="stack.analytics.tableau.desc">Jupyter / Google Colab — исследовательский анализ данных (EDA), визуализация инсайтов и подготовка интерактивных отчётов. Используется для прототипирования аналитических решений и быстрой проверки гипотез.</p>
+                                <div class="tool-level" data-i18n="stack.analytics.tableau.level">Уровень: Продвинутый</div>
+                            </div>
+                        </div>
+
+                        <div class="stack-tool-card" data-tool="sql">
+                            <div class="tool-header">
+                                <span class="tool-name">SQL (PostgreSQL, OpenSearch, MySQL)</span>
+                                <span class="tool-toggle">+</span>
+                            </div>
+                            <div class="tool-description">
+                                <p data-i18n="stack.analytics.sql.desc">SQL (PostgreSQL, OpenSearch, MySQL) — написание сложных запросов с оконными функциями, CTE и агрегациями; создание автоматизаций и обёрток на Python. Применяется для подготовки витрин данных, расчёта продуктовых метрик и оптимизации хранилищ под аналитические задачи.</p>
+                                <div class="tool-level" data-i18n="stack.analytics.sql.level">Уровень: Средний</div>
                             </div>
                         </div>
 
                         <div class="stack-tool-card" data-tool="abtesting">
                             <div class="tool-header">
-                                <span class="tool-name">A/B Testing</span>
+                                <span class="tool-name">BI (OpenSearch Dashboards)</span>
                                 <span class="tool-toggle">+</span>
                             </div>
                             <div class="tool-description">
@@ -288,7 +288,7 @@
 
                         <div class="stack-tool-card" data-tool="opensearch">
                             <div class="tool-header">
-                                <span class="tool-name">OpenSearch / ElasticSearch</span>
+                                <span class="tool-name">Git / Cron / REST API</span>
                                 <span class="tool-toggle">+</span>
                             </div>
                             <div class="tool-description">
@@ -300,12 +300,12 @@
                 </div>
                 
                 <!-- Engineering Stack -->
-                <div class="stack-category-card engineering-stack">
+                <div class="stack-category-card engineering-stack" data-category="engineering">
                     <h3 class="stack-category-title" data-i18n="stack.engineering.title">Инженерия и ML</h3>
                     <div class="stack-grid">
                         <div class="stack-tool-card" data-tool="python_adv">
                             <div class="tool-header">
-                                <span class="tool-name">Python (Advanced)</span>
+                                <span class="tool-name">Python (pandas, numpy, scipy, scikit-learn, multiprocessing, joblib)</span>
                                 <span class="tool-toggle">+</span>
                             </div>
                             <div class="tool-description">
@@ -316,7 +316,7 @@
 
                         <div class="stack-tool-card" data-tool="ml">
                             <div class="tool-header">
-                                <span class="tool-name">ML (scikit-learn, TensorFlow)</span>
+                                <span class="tool-name">ML & AI (scikit-learn, catboost, xgboost, tensorflow, statsmodels, prophet)</span>
                                 <span class="tool-toggle">+</span>
                             </div>
                             <div class="tool-description">
@@ -327,7 +327,7 @@
 
                         <div class="stack-tool-card" data-tool="dataeng">
                             <div class="tool-header">
-                                <span class="tool-name">Data Engineering (Airflow, dbt)</span>
+                                <span class="tool-name">AI Tools (Cursor, Open WebUI, LangFlow, Ollama)</span>
                                 <span class="tool-toggle">+</span>
                             </div>
                             <div class="tool-description">
@@ -338,7 +338,7 @@
 
                         <div class="stack-tool-card" data-tool="cloud">
                             <div class="tool-header">
-                                <span class="tool-name">Cloud (AWS, GCP)</span>
+                                <span class="tool-name">Orchestration & DevOps (Docker, Airflow, Cron, Git)</span>
                                 <span class="tool-toggle">+</span>
                             </div>
                             <div class="tool-description">
@@ -349,7 +349,7 @@
 
                         <div class="stack-tool-card" data-tool="llm">
                             <div class="tool-header">
-                                <span class="tool-name">LLM & AI</span>
+                                <span class="tool-name">APIs & Integration (REST, FastAPI, Requests)</span>
                                 <span class="tool-toggle">+</span>
                             </div>
                             <div class="tool-description">

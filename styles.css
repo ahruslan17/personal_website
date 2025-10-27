@@ -535,17 +535,24 @@ body {
     font-weight: 600;
     color: var(--primary-color);
     font-size: 1rem;
+    filter: none !important;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .card-text {
-    color: var(--text-secondary);
+    color: var(--text-primary);
     line-height: 1.7;
     font-size: 0.95rem;
+    filter: none !important;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .theme-analytics .engineering-card {
     opacity: 0.4;
-    filter: blur(1px);
     transform: scale(0.85);
     height: auto;
     min-height: 200px;
@@ -553,7 +560,6 @@ body {
 
 .theme-engineering .analytics-card {
     opacity: 0.4;
-    filter: blur(1px);
     transform: scale(0.85);
     height: auto;
     min-height: 200px;
@@ -562,7 +568,6 @@ body {
 .theme-analytics .analytics-card,
 .theme-engineering .engineering-card {
     opacity: 1;
-    filter: blur(0);
     transform: scale(1);
 }
 
@@ -1003,6 +1008,25 @@ body {
 }
 
 /* ===== STACK SECTION ===== */
+#stack {
+    filter: none !important;
+    backdrop-filter: none !important;
+    will-change: auto;
+}
+
+#stack *,
+#stack *::before,
+#stack *::after {
+    filter: none !important;
+    backdrop-filter: none !important;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    will-change: auto;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
 .stack-categories-wrapper {
     display: flex;
     gap: 1.5rem;
@@ -1010,6 +1034,8 @@ body {
     margin: 0 auto;
     perspective: 1000px;
     transform-style: preserve-3d;
+    filter: none !important;
+    backdrop-filter: none !important;
 }
 
 .stack-category-card {
@@ -1020,6 +1046,15 @@ body {
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     opacity: 0.5;
+    filter: none !important;
+    backdrop-filter: none !important;
+    cursor: pointer;
+    user-select: none;
+}
+
+.stack-category-card:not(.show):hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .analytics-stack {
@@ -1052,7 +1087,6 @@ body {
     opacity: 0.4;
     transform: translateZ(0px);
     pointer-events: auto;
-    filter: blur(1px);
     padding: 1.5rem;
 }
 
@@ -1095,11 +1129,28 @@ body {
     text-align: center;
     position: relative;
     z-index: 1;
+    cursor: pointer;
+    user-select: none;
+    filter: none !important;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: all 0.3s ease;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    will-change: auto;
+}
+
+.stack-category-title:hover {
+    transform: translateZ(0) scale(1.05);
+    text-shadow: 0 2px 8px rgba(var(--primary-color-rgb), 0.3);
 }
 
 .stack-grid {
     display: grid;
     gap: 1rem;
+    filter: none !important;
+    backdrop-filter: none !important;
 }
 
 .stack-tool-card {
@@ -1109,6 +1160,7 @@ body {
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
+    filter: none !important;
 }
 
 .stack-tool-card:hover {
@@ -1129,6 +1181,7 @@ body {
     align-items: center;
     padding: 1rem 1.25rem;
     transition: all 0.3s ease;
+    filter: none !important;
 }
 
 .tool-name {
@@ -1136,6 +1189,13 @@ body {
     font-size: 1rem;
     color: var(--text-primary);
     transition: color 0.3s ease;
+    filter: none !important;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    will-change: auto;
 }
 
 .stack-tool-card.active .tool-name {
@@ -1168,18 +1228,29 @@ body {
     overflow: hidden;
     transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s ease;
     padding: 0 1.25rem;
+    filter: none !important;
 }
 
 .stack-tool-card.active .tool-description {
     max-height: 300px;
     padding: 1rem 1.25rem 1.25rem;
+    filter: none !important;
 }
 
 .tool-description p {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    line-height: 1.6;
+    color: var(--text-primary);
+    font-size: 1rem;
+    line-height: 1.7;
     margin-bottom: 0.75rem;
+    filter: none !important;
+    font-weight: 500;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 0.01em;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    will-change: auto;
 }
 
 .tool-level {
@@ -1190,6 +1261,10 @@ body {
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 600;
+    filter: none !important;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    will-change: auto;
 }
 
 /* ===== SKILLS SECTION (Old - keep for backward compatibility) ===== */

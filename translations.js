@@ -8,7 +8,7 @@ const translations = {
             brand: "Портфолио",
             about: "О себе",
             experience: "Опыт",
-            stack: "Stack",
+            stack: "Стэк",
             education: "Образование",
             projects: "Проекты",
             contact: "Контакты",
@@ -46,50 +46,50 @@ const translations = {
             stat3: "автоматизированных отчётов / ETL-процессов"
         },
         stack: {
-            title: "Stack",
+            title: "Стэк",
             analytics: {
                 title: "Продуктовая аналитика",
                 sql: {
-                    desc: "Продвинутый уровень: сложные запросы, оптимизация, оконные функции. Работа с миллиардами строк данных.",
-                    level: "Уровень: Продвинутый"
+                    desc: "SQL (PostgreSQL, OpenSearch, MySQL) — написание сложных запросов с оконными функциями, CTE и агрегациями; создание автоматизаций и обёрток на Python. Применяется для подготовки витрин данных, расчёта продуктовых метрик и оптимизации хранилищ под аналитические задачи.",
+                    level: "Уровень: Средний"
                 },
                 python: {
-                    desc: "Продвинутый уровень: многопоточность, оптимизация памяти, сложная агрегация данных. Ускорил ETL в 50+ раз.",
+                    desc: "Python (pandas, numpy, scipy, matplotlib, seaborn) — обработка, анализ и визуализация данных; построение когорт, воронок, расчёт метрик, проведение A/B-тестов и проверка гипотез. Используется для анализа пользовательского поведения, проверки продуктовых изменений и оценки эффективности фич.",
                     level: "Уровень: Продвинутый"
                 },
                 tableau: {
-                    desc: "Средний уровень: создание дашбордов, сложные вычисления, интеграция с различными источниками данных.",
-                    level: "Уровень: Средний"
+                    desc: "Jupyter / Google Colab — исследовательский анализ данных (EDA), визуализация инсайтов и подготовка интерактивных отчётов. Используется для прототипирования аналитических решений и быстрой проверки гипотез.",
+                    level: "Уровень: Продвинутый"
                 },
                 abtesting: {
-                    desc: "Продвинутый уровень: провёл 10+ успешных A/B-тестов, статистический анализ, определение значимости.",
+                    desc: "BI (OpenSearch Dashboards) — построение дашбордов и алертов для мониторинга ключевых продуктовых метрик (DAU/MAU, Retention, LTV, ARPU, Conversion). Позволяет отслеживать динамику поведения пользователей и выявлять точки роста.",
                     level: "Уровень: Продвинутый"
                 },
                 opensearch: {
-                    desc: "Продвинутый уровень: проектирование схем событий, создание дашбордов, алертинг в реальном времени.",
-                    level: "Уровень: Продвинутый"
+                    desc: "Git / Cron / REST API — автоматизация ETL-процессов, интеграция данных из внешних систем и версионирование аналитических решений. Обеспечивает воспроизводимость анализа и стабильное обновление отчётов.",
+                    level: "Уровень: Средний"
                 }
             },
             engineering: {
                 title: "Инженерия и ML",
                 python_adv: {
-                    desc: "Продвинутый уровень: FastAPI, async/await, метапрограммирование, создание библиотек. Разработка MCP серверов.",
+                    desc: "Python (pandas, numpy, scipy, scikit-learn, multiprocessing, joblib) — разработка аналитических и ML-библиотек, реализация ООП-архитектуры (фабрики, фабричные методы, абстрактные классы), векторизация и параллельные вычисления. Используется для повышения эффективности вычислений и масштабирования аналитических систем.",
                     level: "Уровень: Продвинутый"
                 },
                 ml: {
-                    desc: "Средний уровень: кластеризация, классификация, time series, feature engineering. Создал ML-кластеризацию трафика.",
+                    desc: "ML & AI (scikit-learn, catboost, xgboost, tensorflow, statsmodels, prophet) — реализация моделей регрессии, классификации, кластеризации и временных рядов (ARIMA, SARIMAX); прогнозирование метрик и анализ аномалий. Применяется для построения автоматизированных ML-пайплайнов и предиктивных моделей.",
                     level: "Уровень: Средний"
                 },
                 dataeng: {
-                    desc: "Базовый уровень: проектирование ETL процессов, автоматизация отчётности, работа с таблицами.",
-                    level: "Уровень: Базовый"
+                    desc: "AI Tools (Cursor, Open WebUI, LangFlow, Ollama) — разработка и настройка LLM-пайплайнов, интеграция моделей через API и создание прототипов AI-решений на базе open-source фреймворков. Используется для внедрения AI-инструментов в аналитику и автоматизацию.",
+                    level: "Уровень: Средний"
                 },
                 cloud: {
-                    desc: "Базовый уровень: использование облачных сервисов для аналитики, базовые знания инфраструктуры.",
-                    level: "Уровень: Базовый"
+                    desc: "Orchestration & DevOps (Docker, Airflow, Cron, Git) — контейнеризация и деплой аналитических и ML-систем, настройка планировщиков, CI/CD и мониторинга пайплайнов. Обеспечивает стабильную работу ETL и воспроизводимость ML-экспериментов.",
+                    level: "Уровень: Средний"
                 },
                 llm: {
-                    desc: "Средний уровень: разработка AI-менеджеров, MCP серверов, интеграция LLM. Создал AI-инцидент менеджера.",
+                    desc: "APIs & Integration (REST, FastAPI, Requests) — интеграция внешних данных, разработка микросервисов и API для обмена результатами аналитики и моделей. Позволяет масштабировать систему и связывать аналитические модули с внешними сервисами.",
                     level: "Уровень: Средний"
                 }
             }
@@ -220,46 +220,46 @@ const translations = {
             analytics: {
                 title: "Product Analytics",
                 sql: {
-                    desc: "Advanced level: complex queries, optimization, window functions. Working with billions of rows of data.",
-                    level: "Level: Advanced"
+                    desc: "SQL (PostgreSQL, OpenSearch, MySQL) — writing complex queries with window functions, CTEs and aggregations; creating automations and wrappers in Python. Used for preparing data marts, calculating product metrics and optimizing warehouses for analytical tasks.",
+                    level: "Level: Intermediate"
                 },
                 python: {
-                    desc: "Advanced level: multithreading, memory optimization, complex data aggregation. Accelerated ETL by 50+ times.",
+                    desc: "Python (pandas, numpy, scipy, matplotlib, seaborn) — data processing, analysis and visualization; building cohorts, funnels, metric calculations, conducting A/B tests and hypothesis testing. Used for analyzing user behavior, validating product changes and evaluating feature effectiveness.",
                     level: "Level: Advanced"
                 },
                 tableau: {
-                    desc: "Intermediate level: creating dashboards, complex calculations, integration with various data sources.",
-                    level: "Level: Intermediate"
+                    desc: "Jupyter / Google Colab — exploratory data analysis (EDA), insight visualization and interactive report preparation. Used for prototyping analytical solutions and rapid hypothesis validation.",
+                    level: "Level: Advanced"
                 },
                 abtesting: {
-                    desc: "Advanced level: conducted 10+ successful A/B tests, statistical analysis, significance determination.",
+                    desc: "BI (OpenSearch Dashboards) — building dashboards and alerts for monitoring key product metrics (DAU/MAU, Retention, LTV, ARPU, Conversion). Enables tracking user behavior trends and identifying growth opportunities.",
                     level: "Level: Advanced"
                 },
                 opensearch: {
-                    desc: "Advanced level: designing event schemas, creating dashboards, real-time alerting.",
-                    level: "Level: Advanced"
+                    desc: "Git / Cron / REST API — ETL process automation, external data integration and analytical solution versioning. Ensures analysis reproducibility and stable report updates.",
+                    level: "Level: Intermediate"
                 }
             },
             engineering: {
                 title: "Engineering & ML",
                 python_adv: {
-                    desc: "Advanced level: FastAPI, async/await, metaprogramming, creating libraries. MCP server development.",
+                    desc: "Python (pandas, numpy, scipy, scikit-learn, multiprocessing, joblib) — developing analytical and ML libraries, implementing OOP architecture (factories, factory methods, abstract classes), vectorization and parallel computing. Used to improve calculation efficiency and scale analytical systems.",
                     level: "Level: Advanced"
                 },
                 ml: {
-                    desc: "Intermediate level: clustering, classification, time series, feature engineering. Created ML traffic clustering.",
+                    desc: "ML & AI (scikit-learn, catboost, xgboost, tensorflow, statsmodels, prophet) — implementing regression, classification, clustering and time series models (ARIMA, SARIMAX); metric forecasting and anomaly analysis. Used for building automated ML pipelines and predictive models.",
                     level: "Level: Intermediate"
                 },
                 dataeng: {
-                    desc: "Basic level: ETL process design, report automation, working with tables.",
-                    level: "Level: Basic"
+                    desc: "AI Tools (Cursor, Open WebUI, LangFlow, Ollama) — developing and configuring LLM pipelines, model integration via API and creating AI solution prototypes based on open-source frameworks. Used for integrating AI tools into analytics and automation.",
+                    level: "Level: Intermediate"
                 },
                 cloud: {
-                    desc: "Basic level: using cloud services for analytics, basic infrastructure knowledge.",
-                    level: "Level: Basic"
+                    desc: "Orchestration & DevOps (Docker, Airflow, Cron, Git) — containerization and deployment of analytical and ML systems, scheduler configuration, CI/CD and pipeline monitoring. Ensures stable ETL operation and ML experiment reproducibility.",
+                    level: "Level: Intermediate"
                 },
                 llm: {
-                    desc: "Intermediate level: developing AI managers, MCP servers, LLM integration. Created AI incident manager.",
+                    desc: "APIs & Integration (REST, FastAPI, Requests) — external data integration, microservice development and API for exchanging analytics and model results. Enables system scaling and connecting analytical modules with external services.",
                     level: "Level: Intermediate"
                 }
             }
