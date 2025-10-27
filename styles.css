@@ -12,11 +12,26 @@
 }
 
 body {
-    font-family: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Cantarell, sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
     transition: background-color var(--transition-speed) var(--transition-timing),
                 color var(--transition-speed) var(--transition-timing);
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Improve typography for headings */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+p {
+    font-weight: 400;
+    letter-spacing: 0;
 }
 
 /* ===== ANALYTICS THEME (Orange-White) ===== */
@@ -343,7 +358,254 @@ body {
     width: 100%;
 }
 
-/* ===== HERO SECTION ===== */
+/* ===== HERO & ABOUT COMBINED SECTION ===== */
+.hero-about-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    position: relative;
+    overflow: hidden;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    transition: background 0.4s ease;
+}
+
+.hero-about-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+    margin-bottom: 3rem;
+}
+
+.hero-about-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hero-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hero-greeting {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.hero-name {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+}
+
+.hero-roles {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.role-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.role-badge.clickable {
+    cursor: pointer;
+    user-select: none;
+}
+
+.role-badge.clickable:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.role-badge.clickable:active {
+    transform: scale(0.95);
+}
+
+.theme-analytics .analytics-role {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.theme-analytics .engineering-role {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    border-color: var(--border-color);
+}
+
+.theme-engineering .analytics-role {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    border-color: var(--border-color);
+}
+
+.theme-engineering .engineering-role {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.hero-description .description-text {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    display: block;
+}
+
+.description-analytics,
+.description-engineering {
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.theme-analytics .description-analytics {
+    opacity: 1;
+    max-height: 100px;
+}
+
+.theme-analytics .description-engineering {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.theme-engineering .description-analytics {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.theme-engineering .description-engineering {
+    opacity: 1;
+    max-height: 100px;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+}
+
+/* About Cards */
+.hero-about-cards {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.about-card {
+    background: var(--bg-card);
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 280px;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px var(--shadow-color);
+    border-color: var(--primary-color);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.card-highlight {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.card-text {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.theme-analytics .engineering-card {
+    opacity: 0.4;
+    filter: blur(1px);
+    transform: scale(0.85);
+    height: auto;
+    min-height: 200px;
+}
+
+.theme-engineering .analytics-card {
+    opacity: 0.4;
+    filter: blur(1px);
+    transform: scale(0.85);
+    height: auto;
+    min-height: 200px;
+}
+
+.theme-analytics .analytics-card,
+.theme-engineering .engineering-card {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+}
+
+/* Hero Stats */
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero-stats .stat-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--bg-card);
+    border-radius: 16px;
+    border: 2px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.hero-stats .stat-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px var(--shadow-color);
+    border-color: var(--primary-color);
+}
+
+.hero-stats .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-stats .stat-label {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
+/* OLD HERO SECTION ===== */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -618,6 +880,10 @@ body {
 .section:nth-child(even) {
     background: var(--gradient-card);
     position: relative;
+}
+
+#experience {
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(255, 107, 53, 0.05) 100%) !important;
 }
 
 .section:nth-child(even)::before {
@@ -2462,26 +2728,9 @@ body {
     background: transparent;
 }
 
-/* Hide content during opening animation */
-body.opening-animation {
-    overflow: hidden;
-}
-
-body.opening-animation .navbar,
-body.opening-animation .hero,
-body.opening-animation .section {
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-body.opening-animation-complete .navbar,
-body.opening-animation-complete .hero,
-body.opening-animation-complete .section {
-    opacity: 1;
-}
 
 /* Import Google Fonts for better typography */
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 /* Frost animation effects */
 @keyframes frostFadeIn {
@@ -2751,6 +3000,24 @@ body.opening-animation-complete .section {
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 968px) {
+    .hero-about-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .hero-name {
+        font-size: 2.5rem;
+    }
+
+    .hero-about-cards {
+        margin-top: 2rem;
+    }
+
+    .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
     .hero .container {
         grid-template-columns: 1fr;
     }
@@ -2828,6 +3095,32 @@ body.opening-animation-complete .section {
 @media (max-width: 600px) {
     .container {
         padding: 0 1rem;
+    }
+    
+    .hero-about-section {
+        padding: 2rem 0;
+        min-height: auto;
+    }
+
+    .hero-name {
+        font-size: 2rem;
+    }
+
+    .hero-greeting {
+        font-size: 1rem;
+    }
+
+    .role-badge {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .about-card {
+        padding: 1.5rem;
+    }
+
+    .hero-stats .stat-number {
+        font-size: 2rem;
     }
 
     .name {

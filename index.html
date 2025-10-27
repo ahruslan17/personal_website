@@ -52,69 +52,71 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Hero & About Combined Section -->
+    <section id="about" class="hero-about-section">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    <span class="greeting" data-i18n="hero.greeting">Привет, я</span>
-                    <span class="name" data-i18n="hero.name">Руслан Ахметзянов</span>
-                </h1>
-                <h2 class="hero-subtitle">
-                    <span class="role-analytics" data-i18n="hero.roleAnalytics">Product Analyst</span>
-                    <span class="role-separator">/</span>
-                    <span class="role-engineering" data-i18n="hero.roleEngineering">Analytics Engineer</span>
-                </h2>
-                <p class="hero-description">
-                    <span class="description-analytics" data-i18n="hero.descAnalytics">
-                        Превращаю данные в инсайты, которые двигают продукт вперед
-                    </span>
-                    <span class="description-engineering" data-i18n="hero.descEngineering">
-                        Строю масштабируемые data-решения с использованием ML и AI
-                    </span>
-                </p>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary" data-i18n="hero.btnProjects">Мои проекты</a>
-                    <a href="#contact" class="btn btn-secondary" data-i18n="hero.btnContact">Связаться</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="visual-circle"></div>
-                <div class="visual-data"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section about-section">
-        <div class="container">
-            <h2 class="section-title" data-i18n="about.title">О себе</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p data-i18n="about.p1">
-                        <strong class="analytics-highlight">Как Product Analyst,</strong> я специализируюсь на анализе пользовательского поведения, 
-                        A/B тестировании и создании дашбордов, которые помогают командам принимать 
-                        обоснованные решения.
-                    </p>
-                    <p data-i18n="about.p2">
-                        <strong class="engineering-highlight">Как Analytics Engineer,</strong> я создаю надежные data pipeline, 
-                        разрабатываю ML-модели и внедряю AI-решения для автоматизации 
-                        аналитических процессов.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">3+</div>
-                            <div class="stat-label" data-i18n="about.stat1">года опыта</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">100+</div>
-                            <div class="stat-label" data-i18n="about.stat2">аналитических исследований</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">10+</div>
-                            <div class="stat-label" data-i18n="about.stat3">автоматизированных отчётов / ETL-процессов</div>
+            <div class="hero-about-wrapper">
+                <!-- Left Column - Hero Info -->
+                <div class="hero-about-main">
+                    <div class="hero-intro">
+                        <span class="hero-greeting" data-i18n="hero.greeting">Привет, я</span>
+                        <h1 class="hero-name" data-i18n="hero.name">Руслан Ахметзянов</h1>
+                        <div class="hero-roles">
+                            <span class="role-badge analytics-role clickable" data-role="analytics" data-i18n="hero.roleAnalytics">Product Analyst</span>
+                            <span class="role-badge engineering-role clickable" data-role="engineering" data-i18n="hero.roleEngineering">Analytics Engineer</span>
                         </div>
                     </div>
+                    
+                    <div class="hero-description">
+                        <p class="description-text">
+                            <span class="description-analytics" data-i18n="hero.descAnalytics">
+                                Превращаю данные в инсайты, которые двигают продукт вперед
+                            </span>
+                            <span class="description-engineering" data-i18n="hero.descEngineering">
+                                Строю масштабируемые data-решения с использованием ML и AI
+                            </span>
+                        </p>
+                    </div>
+                    
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary" data-i18n="hero.btnProjects">Проекты</a>
+                        <a href="#contact" class="btn btn-secondary" data-i18n="hero.btnContact">Связаться</a>
+                    </div>
+                </div>
+                
+                <!-- Right Column - About Cards -->
+                <div class="hero-about-cards">
+                    <!-- Analytics Card -->
+                    <div class="about-card analytics-card">
+                        <div class="card-content">
+                            <div class="card-highlight" data-i18n="about.p1.strong">Как Product Analyst,</div>
+                            <p class="card-text" data-i18n="about.p1.text">я провожу сложные исследования пользовательского поведения, A/B-тесты и создаю дашборды для принятия решений. Проектирую аналитические события и схемы данных в OpenSearch и PostgreSQL.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Engineering Card -->
+                    <div class="about-card engineering-card">
+                        <div class="card-content">
+                            <div class="card-highlight" data-i18n="about.p2.strong">Как Analytics Engineer,</div>
+                            <p class="card-text" data-i18n="about.p2.text">я разрабатываю надежные ETL-процессы, создаю ML-модели и внедряю AI-решения для автоматизации аналитических процессов.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Stats Section -->
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">3+</div>
+                    <div class="stat-label" data-i18n="about.stat1">года опыта</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label" data-i18n="about.stat2">аналитических исследований</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label" data-i18n="about.stat3">автоматизированных отчётов / ETL-процессов</div>
                 </div>
             </div>
         </div>

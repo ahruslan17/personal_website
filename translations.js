@@ -33,8 +33,14 @@ const translations = {
         },
         about: {
             title: "О себе",
-            p1: "<strong class='analytics-highlight'>Как Product Analyst,</strong> я провожу сложные исследования пользовательского поведения, A/B-тесты и создаю дашборды для принятия решений. Проектирую аналитические события и схемы данных в OpenSearch и PostgreSQL.",
-            p2: "<strong class='engineering-highlight'>Как Analytics Engineer,</strong> я разрабатываю надежные ETL-процессы, создаю ML-модели и внедряю AI-решения для автоматизации аналитических процессов.",
+            p1: {
+                strong: "Как Product Analyst,",
+                text: "я провожу сложные исследования пользовательского поведения, A/B-тесты и создаю дашборды для принятия решений. Проектирую аналитические события и схемы данных в OpenSearch и PostgreSQL."
+            },
+            p2: {
+                strong: "Как Analytics Engineer,",
+                text: "я разрабатываю надежные ETL-процессы, создаю ML-модели и внедряю AI-решения для автоматизации аналитических процессов."
+            },
             stat1: "года опыта",
             stat2: "аналитических исследований",
             stat3: "автоматизированных отчётов / ETL-процессов"
@@ -197,8 +203,14 @@ const translations = {
         },
         about: {
             title: "About Me",
-            p1: "<strong class='analytics-highlight'>As a Product Analyst,</strong> I conduct complex user behavior research, A/B tests, and create dashboards for decision making. Design analytical events and data schemas in OpenSearch and PostgreSQL.",
-            p2: "<strong class='engineering-highlight'>As an Analytics Engineer,</strong> I develop robust ETL processes, create ML models, and implement AI solutions to automate analytical processes.",
+            p1: {
+                strong: "As a Product Analyst,",
+                text: "I conduct complex user behavior research, A/B tests, and create dashboards for decision making. Design analytical events and data schemas in OpenSearch and PostgreSQL."
+            },
+            p2: {
+                strong: "As an Analytics Engineer,",
+                text: "I develop robust ETL processes, create ML models, and implement AI solutions to automate analytical processes."
+            },
             stat1: "Years of Experience",
             stat2: "Analytical Studies",
             stat3: "Automated Reports / ETL Processes"

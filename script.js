@@ -832,10 +832,6 @@ class StackHintManager {
 document.addEventListener('DOMContentLoaded', () => {
     console.log('🚀 Portfolio initializing with enhanced animations...');
     
-    // Initialize opening animation
-    const openingAnimation = new OpeningAnimation();
-    window.openingAnimation = openingAnimation;
-    
     // Initialize language animation
     const languageAnimation = new LanguageSwitchAnimation();
     window.languageAnimation = languageAnimation;
@@ -848,6 +844,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initialize theme manager
     const themeManager = new ThemeManager();
+    window.themeManager = themeManager;
     
     // Initialize enhanced particle effect
     const particleEffect = new ParticleEffect();
@@ -871,6 +868,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const stackHintManager = new StackHintManager();
     window.stackHintManager = stackHintManager;
     
+    // Initialize role badge clicks for theme switching
+    const roleBadges = document.querySelectorAll('.role-badge.clickable');
+    roleBadges.forEach(badge => {
+        badge.addEventListener('click', () => {
+            const role = badge.getAttribute('data-role');
+            if (role === 'analytics') {
+                window.themeManager.setTheme('theme-analytics');
+            } else if (role === 'engineering') {
+                window.themeManager.setTheme('theme-engineering');
+            }
+        });
+    });
+    
     console.log('✅ Portfolio website initialized with cool animations!');
     console.log('💡 Hover over the theme toggle button (📊/💻) in navbar to see what it does!');
     console.log('🌐 Switch language using the RU/EN toggle in the navbar.');
@@ -878,12 +888,6 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('🎬 Click RU/EN to see the amazing pixel scatter animation!');
     console.log('🔧 Language manager available as window.languageManager for debugging');
     console.log('🎭 Test pixel animation with: testPixelAnimation()');
-    console.log('🎬 Test opening animation with: testOpeningAnimation()');
-    
-    // Play opening animation
-    setTimeout(() => {
-        openingAnimation.playOpeningAnimation();
-    }, 500);
     
     // Test language switching after a short delay
     setTimeout(() => {
@@ -1209,12 +1213,4 @@ window.testPixelAnimation = function() {
     }
 };
 
-window.testOpeningAnimation = function() {
-    if (window.openingAnimation) {
-        console.log('🎬 Testing opening animation...');
-        window.openingAnimation.playOpeningAnimation();
-    } else {
-        console.error('❌ Opening animation not available');
-    }
-};
 
