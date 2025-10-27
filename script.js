@@ -233,6 +233,11 @@ class ThemeManager {
     }
 
     updateTooltipVisibility() {
+        // Don't control tooltip if we're in Stack section - let StackHintManager handle it
+        if (window.stackHintManager && window.stackHintManager.isInStackSection) {
+            return;
+        }
+        
         // Show tooltip ONLY if: on hero section AND (always OR hovering)
         // When not on hero - show ONLY on hover
         if (this.isOnHeroSection) {
@@ -609,6 +614,8 @@ class NavbarScroll {
 class TimelineAccordionManager {
     constructor() {
         this.timelineItems = document.querySelectorAll('.timeline-item');
+        this.expandHint = document.getElementById('expandHint');
+        this.hasClickedSecondItem = false;
         this.init();
     }
 
@@ -622,12 +629,202 @@ class TimelineAccordionManager {
         if (this.timelineItems.length > 0) {
             this.timelineItems[0].classList.add('expanded');
         }
+        
+        // Show hint for second item after a delay
+        setTimeout(() => {
+            this.showHint();
+        }, 2000);
     }
 
     toggleItem(clickedItem) {
         this.timelineItems.forEach(item => {
             item.classList.toggle('expanded', item === clickedItem);
         });
+        
+        // Hide hint when second item is clicked
+        if (clickedItem === this.timelineItems[1] && !this.hasClickedSecondItem) {
+            this.hideHint();
+            this.hasClickedSecondItem = true;
+        }
+    }
+    
+    showHint() {
+        if (this.expandHint && !this.hasClickedSecondItem) {
+            setTimeout(() => {
+                this.expandHint.classList.add('show');
+            }, 500);
+        }
+    }
+    
+    hideHint() {
+        if (this.expandHint) {
+            this.expandHint.classList.remove('show');
+            setTimeout(() => {
+                this.expandHint.classList.add('hidden');
+            }, 500);
+        }
+    }
+}
+
+// Stack Tool Card Manager
+class StackToolManager {
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        const toolCards = document.querySelectorAll('.stack-tool-card');
+        
+        toolCards.forEach(card => {
+            card.addEventListener('click', () => {
+                // Toggle active state
+                card.classList.toggle('active');
+            });
+        });
+        
+        // Initialize visibility based on current theme
+        this.updateStackVisibility();
+        
+        // Listen for theme changes
+        const themeObserver = new MutationObserver(() => {
+            this.updateStackVisibility();
+        });
+        
+        themeObserver.observe(document.body, {
+            attributes: true,
+            attributeFilter: ['class']
+        });
+    }
+    
+    updateStackVisibility() {
+        const analyticsStack = document.querySelector('.analytics-stack');
+        const engineeringStack = document.querySelector('.engineering-stack');
+        const isAnalytics = document.body.classList.contains('theme-analytics');
+        
+        if (analyticsStack && engineeringStack) {
+            // Remove all classes
+            analyticsStack.classList.remove('show', 'hide');
+            engineeringStack.classList.remove('show', 'hide');
+            
+            // Add appropriate classes
+            if (isAnalytics) {
+                analyticsStack.classList.add('show');
+                engineeringStack.classList.add('hide');
+            } else {
+                analyticsStack.classList.add('hide');
+                engineeringStack.classList.add('show');
+            }
+        }
+    }
+}
+
+// Stack Hint Manager - updates navbar tooltip text based on section
+class StackHintManager {
+    constructor() {
+        this.isInStackSection = false;
+        this.tooltip = document.getElementById('themeTooltip');
+        this.analyticsText = this.tooltip?.querySelector('.analytics-text');
+        this.engineeringText = this.tooltip?.querySelector('.engineering-text');
+        this.themeToggle = document.querySelector('.theme-toggle-navbar');
+        this.init();
+    }
+    
+    init() {
+        // Observe when Stack section is visible
+        const stackSection = document.getElementById('stack');
+        if (!stackSection) return;
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const wasInStackSection = this.isInStackSection;
+                this.isInStackSection = entry.isIntersecting;
+                this.updateTooltipText();
+                
+                // Always show hint when in Stack section
+                if (this.isInStackSection) {
+                    this.showHint();
+                    this.tooltip.classList.add('stack-hint-active');
+                } else if (wasInStackSection) {
+                    // Hide hint when leaving Stack section
+                    this.hideHint();
+                    this.tooltip.classList.remove('stack-hint-active');
+                }
+            });
+        }, { threshold: 0.3 });
+        
+        observer.observe(stackSection);
+        
+        // Listen for theme changes
+        const themeObserver = new MutationObserver(() => {
+            this.updateTooltipText();
+        });
+        
+        themeObserver.observe(document.body, {
+            attributes: true,
+            attributeFilter: ['class']
+        });
+    }
+    
+    showHint() {
+        if (!this.tooltip || !this.themeToggle) return;
+        
+        // Show tooltip - it will stay visible while in Stack section
+        this.tooltip.classList.add('show');
+    }
+    
+    hideHint() {
+        if (this.tooltip) {
+            this.tooltip.classList.remove('show');
+        }
+    }
+    
+    updateTooltipText() {
+        if (!this.tooltip || !this.analyticsText || !this.engineeringText) return;
+        
+        const lang = document.documentElement.lang || 'ru';
+        const translationsObj = translations[lang];
+        const isAnalytics = document.body.classList.contains('theme-analytics');
+        
+        if (!translationsObj?.nav) return;
+        
+        if (this.isInStackSection) {
+            // In Stack section - show stack-related tooltip
+            if (!translationsObj.nav.stackTooltip) return;
+            
+            if (isAnalytics) {
+                // Analytics theme -> show engineering stack hint
+                this.analyticsText.style.display = 'none';
+                this.engineeringText.style.display = 'block';
+                this.engineeringText.textContent = translationsObj.nav.stackTooltip.engineering;
+            } else {
+                // Engineering theme -> show analytics stack hint
+                this.analyticsText.style.display = 'block';
+                this.engineeringText.style.display = 'none';
+                this.analyticsText.textContent = translationsObj.nav.stackTooltip.analytics;
+            }
+            
+            // Ensure hint stays visible in Stack section
+            this.tooltip.classList.add('show');
+            this.tooltip.classList.add('stack-hint-active');
+        } else {
+            // In other sections - show portfolio-related tooltip
+            if (!translationsObj.nav.tooltip) return;
+            
+            if (isAnalytics) {
+                // Analytics theme -> show engineering portfolio hint
+                this.analyticsText.style.display = 'none';
+                this.engineeringText.style.display = 'block';
+                this.engineeringText.textContent = translationsObj.nav.tooltip.engineering;
+            } else {
+                // Engineering theme -> show analytics portfolio hint
+                this.analyticsText.style.display = 'block';
+                this.engineeringText.style.display = 'none';
+                this.analyticsText.textContent = translationsObj.nav.tooltip.analytics;
+            }
+            
+            // Remove Stack-specific classes when not in Stack
+            this.tooltip.classList.remove('stack-hint-active');
+        }
     }
 }
 
@@ -666,6 +863,13 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initialize navbar scroll effect
     const navbarScroll = new NavbarScroll();
+    
+    // Initialize stack tool manager
+    const stackToolManager = new StackToolManager();
+    
+    // Initialize stack hint manager and make it globally accessible
+    const stackHintManager = new StackHintManager();
+    window.stackHintManager = stackHintManager;
     
     console.log('✅ Portfolio website initialized with cool animations!');
     console.log('💡 Hover over the theme toggle button (📊/💻) in navbar to see what it does!');

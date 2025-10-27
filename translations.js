@@ -7,15 +7,18 @@ const translations = {
         nav: {
             brand: "Портфолио",
             about: "О себе",
-            skills: "Навыки",
             experience: "Опыт",
+            stack: "Stack",
             education: "Образование",
-            publications: "Публикации",
             projects: "Проекты",
             contact: "Контакты",
             tooltip: {
-                analytics: "Показать проекты по продуктовой аналитике",
-                engineering: "Показать инженерные и AI проекты"
+                analytics: "Показать портфолио по продуктовой аналитике",
+                engineering: "Показать портфолио инженера AI и аналитики"
+            },
+            stackTooltip: {
+                analytics: "Показать аналитический стак",
+                engineering: "Показать инженерный стак"
             }
         },
         hero: {
@@ -36,13 +39,58 @@ const translations = {
             stat2: "аналитических исследований",
             stat3: "автоматизированных отчётов / ETL-процессов"
         },
-        skills: {
-            title: "Навыки",
-            analyticsCategory: "Продуктовая аналитика",
-            engineeringCategory: "Инженерия и ML"
+        stack: {
+            title: "Stack",
+            analytics: {
+                title: "Продуктовая аналитика",
+                sql: {
+                    desc: "Продвинутый уровень: сложные запросы, оптимизация, оконные функции. Работа с миллиардами строк данных.",
+                    level: "Уровень: Продвинутый"
+                },
+                python: {
+                    desc: "Продвинутый уровень: многопоточность, оптимизация памяти, сложная агрегация данных. Ускорил ETL в 50+ раз.",
+                    level: "Уровень: Продвинутый"
+                },
+                tableau: {
+                    desc: "Средний уровень: создание дашбордов, сложные вычисления, интеграция с различными источниками данных.",
+                    level: "Уровень: Средний"
+                },
+                abtesting: {
+                    desc: "Продвинутый уровень: провёл 10+ успешных A/B-тестов, статистический анализ, определение значимости.",
+                    level: "Уровень: Продвинутый"
+                },
+                opensearch: {
+                    desc: "Продвинутый уровень: проектирование схем событий, создание дашбордов, алертинг в реальном времени.",
+                    level: "Уровень: Продвинутый"
+                }
+            },
+            engineering: {
+                title: "Инженерия и ML",
+                python_adv: {
+                    desc: "Продвинутый уровень: FastAPI, async/await, метапрограммирование, создание библиотек. Разработка MCP серверов.",
+                    level: "Уровень: Продвинутый"
+                },
+                ml: {
+                    desc: "Средний уровень: кластеризация, классификация, time series, feature engineering. Создал ML-кластеризацию трафика.",
+                    level: "Уровень: Средний"
+                },
+                dataeng: {
+                    desc: "Базовый уровень: проектирование ETL процессов, автоматизация отчётности, работа с таблицами.",
+                    level: "Уровень: Базовый"
+                },
+                cloud: {
+                    desc: "Базовый уровень: использование облачных сервисов для аналитики, базовые знания инфраструктуры.",
+                    level: "Уровень: Базовый"
+                },
+                llm: {
+                    desc: "Средний уровень: разработка AI-менеджеров, MCP серверов, интеграция LLM. Создал AI-инцидент менеджера.",
+                    level: "Уровень: Средний"
+                }
+            }
         },
         experience: {
             title: "Опыт работы",
+            expandHint: "Кликни, чтобы увидеть больше",
             job1: {
                 date: "03/2024 – Present",
                 title: "Data Analyst",
@@ -75,9 +123,22 @@ const translations = {
             }
         },
         education: {
-            title: "Образование",
-            degree1: "Applied Mathematics, Gubkin University (B.Sc.)",
-            degree2: "Translator in Professional Communication"
+            title: "Образование и публикации",
+            university: "Российский государственный университет нефти и газа имени И.М. Губкина",
+            degree1: {
+                badge: "Бакалавр",
+                title: "Прикладная математика"
+            },
+            degree2: {
+                title: "Переводчик в сфере профессиональной коммуникации"
+            },
+            period1: "2019 - 2023",
+            period2: "2021 - 2023",
+            publicationsTitle: "Публикации",
+            pub1: "Surrogate Models for the Compressibility Factor of Natural Gas",
+            pub2: "Machine Learning-Based Models for the Compressibility Factor of Natural Gas",
+            pub3: "Intelligent Analysis Of Geological And Geophysical Data",
+            pub4: "A series of digests of scientific and technical publications"
         },
         publications: {
             title: "Публикации",
@@ -86,29 +147,9 @@ const translations = {
         },
         projects: {
             title: "Проекты",
-            project1: {
-                title: "Анализ поведения пользователей",
-                description: "Комплексный анализ поведения пользователей с использованием cohort analysis и retention метрик. Результат - увеличение удержания на 30%."
-            },
-            project2: {
-                title: "Фреймворк A/B тестирования",
-                description: "Разработка фреймворка для проведения и анализа A/B тестов с автоматическим расчетом статистической значимости."
-            },
-            project3: {
-                title: "Модель прогнозирования оттока",
-                description: "ML-модель для прогнозирования оттока пользователей с точностью 87%. Интеграция с production pipeline через API."
-            },
-            project4: {
-                title: "Автоматизация Data Pipeline",
-                description: "Построение автоматизированного ETL pipeline с использованием Airflow и dbt для обработки данных в реальном времени."
-            },
-            project5: {
-                title: "AI-помощник для аналитики",
-                description: "Разработка чат-бота на базе LLM для автоматического ответа на аналитические вопросы и генерации SQL запросов."
-            },
-            project6: {
-                title: "Дашборд доходов",
-                description: "Интерактивный дашборд для отслеживания revenue метрик в реальном времени с drill-down функциональностью."
+            wip: {
+                title: "Раздел находится в разработке",
+                description: "Проекты смотреть на GitHub:"
             }
         },
         contact: {
@@ -130,15 +171,18 @@ const translations = {
         nav: {
             brand: "Portfolio",
             about: "About",
-            skills: "Skills",
             experience: "Experience",
+            stack: "Stack",
             education: "Education",
-            publications: "Publications",
             projects: "Projects",
             contact: "Contact",
             tooltip: {
-                analytics: "Show Product Analytics projects",
-                engineering: "Show Engineering & AI projects"
+                analytics: "Show Product Analytics portfolio",
+                engineering: "Show Engineering & AI Analytics portfolio"
+            },
+            stackTooltip: {
+                analytics: "Show Analytics Stack",
+                engineering: "Show Engineering Stack"
             }
         },
         hero: {
@@ -159,13 +203,58 @@ const translations = {
             stat2: "Analytical Studies",
             stat3: "Automated Reports / ETL Processes"
         },
-        skills: {
-            title: "Skills",
-            analyticsCategory: "Product Analytics",
-            engineeringCategory: "Engineering & ML"
+        stack: {
+            title: "Stack",
+            analytics: {
+                title: "Product Analytics",
+                sql: {
+                    desc: "Advanced level: complex queries, optimization, window functions. Working with billions of rows of data.",
+                    level: "Level: Advanced"
+                },
+                python: {
+                    desc: "Advanced level: multithreading, memory optimization, complex data aggregation. Accelerated ETL by 50+ times.",
+                    level: "Level: Advanced"
+                },
+                tableau: {
+                    desc: "Intermediate level: creating dashboards, complex calculations, integration with various data sources.",
+                    level: "Level: Intermediate"
+                },
+                abtesting: {
+                    desc: "Advanced level: conducted 10+ successful A/B tests, statistical analysis, significance determination.",
+                    level: "Level: Advanced"
+                },
+                opensearch: {
+                    desc: "Advanced level: designing event schemas, creating dashboards, real-time alerting.",
+                    level: "Level: Advanced"
+                }
+            },
+            engineering: {
+                title: "Engineering & ML",
+                python_adv: {
+                    desc: "Advanced level: FastAPI, async/await, metaprogramming, creating libraries. MCP server development.",
+                    level: "Level: Advanced"
+                },
+                ml: {
+                    desc: "Intermediate level: clustering, classification, time series, feature engineering. Created ML traffic clustering.",
+                    level: "Level: Intermediate"
+                },
+                dataeng: {
+                    desc: "Basic level: ETL process design, report automation, working with tables.",
+                    level: "Level: Basic"
+                },
+                cloud: {
+                    desc: "Basic level: using cloud services for analytics, basic infrastructure knowledge.",
+                    level: "Level: Basic"
+                },
+                llm: {
+                    desc: "Intermediate level: developing AI managers, MCP servers, LLM integration. Created AI incident manager.",
+                    level: "Level: Intermediate"
+                }
+            }
         },
         experience: {
             title: "Work Experience",
+            expandHint: "Click to see more",
             job1: {
                 date: "03/2024 – Present",
                 title: "Data Analyst",
@@ -198,9 +287,22 @@ const translations = {
             }
         },
         education: {
-            title: "Education",
-            degree1: "Applied Mathematics, Gubkin University (B.Sc.)",
-            degree2: "Translator in Professional Communication"
+            title: "Education & Publications",
+            university: "Gubkin Russian State University of Oil and Gas",
+            degree1: {
+                badge: "Bachelor",
+                title: "Applied Mathematics"
+            },
+            degree2: {
+                title: "Translator in Professional Communication"
+            },
+            period1: "2019 - 2023",
+            period2: "2021 - 2023",
+            publicationsTitle: "Publications",
+            pub1: "Surrogate Models for the Compressibility Factor of Natural Gas",
+            pub2: "Machine Learning-Based Models for the Compressibility Factor of Natural Gas",
+            pub3: "Intelligent Analysis Of Geological And Geophysical Data",
+            pub4: "A series of digests of scientific and technical publications"
         },
         publications: {
             title: "Publications",
@@ -209,29 +311,9 @@ const translations = {
         },
         projects: {
             title: "Projects",
-            project1: {
-                title: "User Behavior Analysis",
-                description: "Comprehensive user behavior analysis using cohort analysis and retention metrics. Result - 30% increase in user retention."
-            },
-            project2: {
-                title: "A/B Testing Framework",
-                description: "Development of a framework for conducting and analyzing A/B tests with automatic statistical significance calculation."
-            },
-            project3: {
-                title: "Churn Prediction Model",
-                description: "ML model for predicting user churn with 87% accuracy. Integration with production pipeline via API."
-            },
-            project4: {
-                title: "Data Pipeline Automation",
-                description: "Building automated ETL pipeline using Airflow and dbt for real-time data processing."
-            },
-            project5: {
-                title: "AI-Powered Analytics Assistant",
-                description: "Development of an LLM-based chatbot for automatic answers to analytical questions and SQL query generation."
-            },
-            project6: {
-                title: "Revenue Dashboard",
-                description: "Interactive dashboard for tracking revenue metrics in real-time with drill-down functionality."
+            wip: {
+                title: "Section is under construction",
+                description: "View projects on GitHub:"
             }
         },
         contact: {
