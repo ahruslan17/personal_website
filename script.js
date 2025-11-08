@@ -846,6 +846,60 @@ class StackHintManager {
     }
 }
 
+// Google Analytics Referral Tracker
+class ReferralTracker {
+    constructor(options = {}) {
+        this.refParamName = options.refParamName || 'ref';
+        this.storageKey = options.storageKey || 'portfolio-referral-id';
+        this.baseUrl = `${window.location.origin}${window.location.pathname}`;
+        this.init();
+    }
+
+    init() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const refIdFromUrl = urlParams.get(this.refParamName);
+
+        if (refIdFromUrl) {
+            localStorage.setItem(this.storageKey, refIdFromUrl);
+            this.sendEvent('referral_link_click', refIdFromUrl);
+            console.log(`📈 Referral detected: ${refIdFromUrl}`);
+        } else {
+            const storedRefId = localStorage.getItem(this.storageKey);
+            if (storedRefId) {
+                this.sendEvent('referral_return_visit', storedRefId);
+                console.log(`📈 Returning referral visit: ${storedRefId}`);
+            }
+        }
+    }
+
+    sendEvent(eventName, refId) {
+        if (typeof window.gtag === 'function') {
+            window.gtag('event', eventName, {
+                referral_id: refId,
+                page_path: window.location.pathname + window.location.search,
+                page_title: document.title
+            });
+        } else {
+            console.warn('⚠️ gtag is not available yet, skipping referral event.');
+        }
+    }
+
+    generateLink(refId) {
+        if (!refId) {
+            refId = this.createRandomId();
+        }
+        const url = new URL(this.baseUrl);
+        url.searchParams.set(this.refParamName, refId);
+        return url.toString();
+    }
+
+    createRandomId(prefix = 'ref') {
+        const randomPart = Math.random().toString(36).slice(2, 8);
+        const timestampPart = Date.now().toString(36);
+        return `${prefix}-${randomPart}-${timestampPart}`;
+    }
+}
+
 // Initialize everything when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     console.log('🚀 Portfolio initializing with enhanced animations...');
@@ -885,6 +939,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize stack hint manager and make it globally accessible
     const stackHintManager = new StackHintManager();
     window.stackHintManager = stackHintManager;
+    
+    // Initialize Google Analytics referral tracker
+    const referralTracker = new ReferralTracker();
+    window.referralTracker = referralTracker;
+    window.generateTrackingLink = (refId) => referralTracker.generateLink(refId);
+    window.createReferralId = (prefix) => referralTracker.createRandomId(prefix);
     
     // Initialize role badge clicks for theme switching
     const roleBadges = document.querySelectorAll('.role-badge.clickable');
