@@ -848,34 +848,55 @@ class StackHintManager {
 
 // Google Analytics Referral Tracker
 class ReferralTracker {
-    constructor(options = {}) {
-        this.refParamName = options.refParamName || 'ref';
-        this.storageKey = options.storageKey || 'portfolio-referral-id';
+    constructor(config = {}) {
         this.baseUrl = `${window.location.origin}${window.location.pathname}`;
+        this.paramConfigs = config.paramConfigs || [
+            {
+                param: 'ref',
+                storageKey: 'portfolio-referral-id',
+                createEvent: 'referral_link_click',
+                returnEvent: 'referral_return_visit',
+                defaultPrefix: 'ref'
+            },
+            {
+                param: 'id',
+                storageKey: 'portfolio-visitor-id',
+                createEvent: 'personal_link_open',
+                returnEvent: 'personal_return_visit',
+                defaultPrefix: 'visitor',
+                userProperty: 'visitor_id'
+            }
+        ];
         this.init();
     }
 
     init() {
         const urlParams = new URLSearchParams(window.location.search);
-        const refIdFromUrl = urlParams.get(this.refParamName);
+        this.paramConfigs.forEach(config => {
+            const valueFromUrl = urlParams.get(config.param);
 
-        if (refIdFromUrl) {
-            localStorage.setItem(this.storageKey, refIdFromUrl);
-            this.sendEvent('referral_link_click', refIdFromUrl);
-            console.log(`📈 Referral detected: ${refIdFromUrl}`);
-        } else {
-            const storedRefId = localStorage.getItem(this.storageKey);
-            if (storedRefId) {
-                this.sendEvent('referral_return_visit', storedRefId);
-                console.log(`📈 Returning referral visit: ${storedRefId}`);
+            if (valueFromUrl) {
+                localStorage.setItem(config.storageKey, valueFromUrl);
+                this.sendEvent(config.createEvent, config.param, valueFromUrl);
+                this.setUserProperty(config.userProperty, valueFromUrl);
+                console.log(`📈 Tracked ${config.param}: ${valueFromUrl}`);
+            } else {
+                const storedValue = localStorage.getItem(config.storageKey);
+                if (storedValue) {
+                    this.sendEvent(config.returnEvent, config.param, storedValue);
+                    this.setUserProperty(config.userProperty, storedValue);
+                    console.log(`📈 Returning ${config.param}: ${storedValue}`);
+                }
             }
-        }
+        });
     }
 
-    sendEvent(eventName, refId) {
+    sendEvent(eventName, paramName, value) {
         if (typeof window.gtag === 'function') {
             window.gtag('event', eventName, {
-                referral_id: refId,
+                [paramName]: value,
+                tracker_param: paramName,
+                tracker_value: value,
                 page_path: window.location.pathname + window.location.search,
                 page_title: document.title
             });
@@ -884,12 +905,45 @@ class ReferralTracker {
         }
     }
 
-    generateLink(refId) {
-        if (!refId) {
-            refId = this.createRandomId();
+    setUserProperty(propertyName, value) {
+        if (!propertyName || !value) return;
+        if (typeof window.gtag === 'function') {
+            window.gtag('set', 'user_properties', {
+                [propertyName]: value
+            });
+        } else {
+            console.warn('⚠️ gtag is not available yet, skipping user property set.');
         }
+    }
+
+    generateLink(param = 'ref', value) {
+        let actualParam = param;
+        let actualValue = value;
+
+        // Support calling with object: { param, value }
+        if (typeof param === 'object' && param !== null) {
+            actualParam = param.param || 'ref';
+            actualValue = param.value;
+        }
+
+        const config = this.paramConfigs.find(cfg => cfg.param === actualParam);
+
+        // If first argument is actually a value (legacy usage)
+        if (!config && typeof param === 'string' && value === undefined) {
+            actualValue = param;
+            actualParam = 'ref';
+        }
+
+        const finalConfig = this.paramConfigs.find(cfg => cfg.param === actualParam) 
+            || this.paramConfigs[0];
+
+        if (!actualValue) {
+            const prefix = finalConfig?.defaultPrefix || actualParam || 'ref';
+            actualValue = this.createRandomId(prefix);
+        }
+
         const url = new URL(this.baseUrl);
-        url.searchParams.set(this.refParamName, refId);
+        url.searchParams.set(actualParam, actualValue);
         return url.toString();
     }
 
@@ -943,7 +997,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize Google Analytics referral tracker
     const referralTracker = new ReferralTracker();
     window.referralTracker = referralTracker;
-    window.generateTrackingLink = (refId) => referralTracker.generateLink(refId);
+    window.generateTrackingLink = (param, value) => referralTracker.generateLink(param, value);
+    window.generatePersonalLink = (value) => referralTracker.generateLink('id', value);
     window.createReferralId = (prefix) => referralTracker.createRandomId(prefix);
     
     // Initialize role badge clicks for theme switching
