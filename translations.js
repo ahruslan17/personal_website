@@ -99,33 +99,46 @@ const translations = {
             expandHint: "Кликни, чтобы увидеть больше",
             job1: {
                 date: "03/2024 – Present",
-                title: "Data Analyst",
-                company: "Gear Games",
-                desc: "Automated data workflows, built retention analytics, created player segmentation via clustering",
-                desc1: "Проведение глубоких аналитических исследований. Повысил Retention-1d на 30%, завершил 10+ успешных AB-тестов",
-                desc2: "Улучшение аналитических Python-библиотек. Создал многопоточную выгрузку данных, ускорив загрузку в 50+ раз",
-                desc3: "Создание ML-кластеризации входящего трафика. Достоверная разметка игроков по 1-му дню жизни в игре для маркетинга и монетизации. Сократил расходы на закупку трафика, повысил точность таргетинговой системы офферов",
-                desc4: "Автоматизация отчётности и ETL-процессы. Разработал отчёт по ретеншену, отчёт по основным метрикам и многие др.",
-                desc5: "Развитие AI, LLM, MCP. Создал ai-инцидент менеджера, ассистента по заведению задач, MCP YoutTrack, MCP OpenSearch",
-                desc6: "Создание дашбордов, схем ивентов и алертинга в реальном времени на базе OpenSearch/ElasticSearch",
-                desc7: "Активное участие в жизни компании, разработка системы прогнозов для внутреннего турнира",
-                desc8: "Исполнение обязанностей тимлида команды разработки и техлида отдела аналитики: проведение дейликов, планирование спринтов, координация работы кросс-функциональной команды из 10 человек, выпуск фичей"
+                title: "Senior Data Analyst (ML/DS)",
+                company: '<a href="https://gear-games.com/ru/" target="_blank" rel="noopener">Gear Games</a>',
+                desc: "Веду продуктовую аналитику, автоматизирую AI-процессы и управляю кросс-функциональной командой",
+                desc1: "Проведение глубоких аналитических исследований. Повысил Retention-1d на 30%.",
+                desc2: "Развитие культуры A/B тестирования. Создал автоматизированные алгоритмы дизайна и расчёта результатов A/B тестов. Завершил 20+ успешных AB-тестов.",
+                desc3: "Улучшение аналитических Python-библиотек. Создал библиотеку многопоточной выгрузки данных, ускорив загрузку в 50+ раз.",
+                desc4: "Создание ML-кластеризации входящего трафика. Достоверная разметка игроков по 1-му дню жизни в игре для маркетинга и монетизации. Сократил расходы на закупку трафика, повысил точность таргетинговой системы офферов.",
+                desc5: "Автоматизация отчётности и ETL-процессы. Разработал отчёт по ретеншену, кросс-проектный отчёт по основным метрикам и многие др.",
+                desc6: "Развитие AI, LLM, MCP. Создал AI-инцидент менеджера, ассистента по заведению задач, MCP YouTrack, MCP OpenSearch.",
+                desc7: "Создание дашбордов, схем ивентов и алертинга в реальном времени на базе OpenSearch/ElasticSearch.",
+                desc8: "Активное участие в жизни компании, разработка системы прогнозов для внутреннего турнира.",
+                desc9: "Исполнение обязанностей тимлида команды разработки и техлида отдела аналитики: проведение дейликов, планирование спринтов, координация работы кросс-функциональной команды из 10 человек, выпуск фичей."
             },
             job2: {
                 date: "10/2022 – 01/2024 (удалённо)",
-                title: "Fullstack Analyst",
-                company: "Quant Shark Technologies (стартап)",
-                desc: "Разработал и внедрил архитектуру системы бэктестов для тестирования криптотрейдинговых стратегий на исторических данных",
-                desc2: "Создал и автоматизировал новостную торговую стратегию, открывающую длинные позиции на вторичных биржах сразу после появления новостей о листинге токена на Binance — с автоматическим парсингом новостей и интеграцией с API бирж",
-                desc3: "Исследовал, построил и протестировал стратегию статистического арбитража с динамическим окном переобучения на основе научных публикаций",
-                desc4: "Настроил и поддерживал инфраструктуру для автоматизированной торговли на выделенном сервере Ubuntu, обеспечив стабильное выполнение и мониторинг стратегий",
-                desc5: "Подготовил технические спецификации и архитектурную документацию для системы бэктестов, использовавшиеся разработчиками для дальнейшего расширения проекта"
+                title: "Quantitative Researcher / Algorithmic Trading Developer",
+                company: '<a href="https://qtshark.com/" target="_blank" rel="noopener">Quant Shark Technologies</a>',
+                desc: "Исследовал и автоматизировал алгоритмические стратегии для крипторынка",
+                desc1: 'Изучил и реализовал стратегию из научной статьи "Evaluation of Dynamic Cointegration-Based Pairs Trading Strategy in the Cryptocurrency Market" (Masood Tadi, Irina Kortchemski, 2021).',
+                desc2: "Курировал создание и архитектуру внутренней системы бэктестинга: подготовка технической документации для разработки; проектирование пайплайна загрузки данных, расчётов и визуализации результатов.",
+                desc3: "Автоматизировал исполнение торговых стратегий через API криптобирж: реализовал стратегию автоматического открытия позиций при публикации новостей о листинге токена; обеспечил развёртывание стратегий на выделенном сервере под управлением Ubuntu.",
+                desc4: "Проводил оптимизацию параметров торговых стратегий."
             },
             job3: {
+                date: "08/2021 – 09/2022",
+                title: "Data Analyst / Technical Specialist",
+                company: '<a href="https://incraft3d.ru/" target="_blank" rel="noopener">InCraft by Baustov</a>',
+                desc: "Цифровизировал производство 3D-печати и построил аналитическую инфраструктуру",
+                desc1: "Разработал с нуля систему учёта оборудования и расходных материалов для 3D-принтеров — реализовал отслеживание поступлений, текущих остатков и использования комплектующих.",
+                desc2: "Оптимизировал параметры 3D-печати на основе анализа производственных данных, что сократило брак и снизило расход материалов.",
+                desc3: "Создал плагин для Cura (Python) для версионирования параметров печати и ведения технических заметок, что повысило воспроизводимость результатов.",
+                desc4: "Построил модель прогнозирования спроса и сезонности расходников, позволившую планировать закупки заранее и поддерживать нужный уровень запасов в периоды пиковых заказов."
+            },
+            job4: {
                 date: "06/2022 – 09/2022",
-                title: "Junior ML&AI Researcher",
-                company: "ООО «НИИгазэкономика»",
-                desc: "Решал задачи в области детекции аномалий временных рядов (ML, AI)"
+                title: "Intern ML&AI — стажировка",
+                company: '<a href="https://niigazekonomika.gazprom.ru/" target="_blank" rel="noopener">NIIgazEconomika LLC</a>',
+                desc: "Работал с задачами детектирования аномалий во временных рядах",
+                desc1: "Исследования в области детектирования аномалий во временных рядах с применением методов машинного обучения и искусственного интеллекта.",
+                desc2: "Разработал модель детекции аномалий временных рядов при помощи кластеризации."
             }
         },
         education: {
@@ -269,33 +282,46 @@ const translations = {
             expandHint: "Click to see more",
             job1: {
                 date: "03/2024 – Present",
-                title: "Data Analyst",
-                company: "Gear Games",
-                desc: "Automated data workflows, built retention analytics, created player segmentation via clustering",
-                desc1: "Conducted deep analytical research. Improved Retention-1d by 30%, completed 10+ successful AB-tests",
-                desc2: "Enhanced analytical Python libraries. Created multi-threaded data export, accelerated loading by 50+ times",
-                desc3: "Created ML clustering for incoming traffic. Accurate player labeling by 1st day of life in-game for marketing and monetization. Reduced traffic acquisition costs, improved targeting system accuracy for offers",
-                desc4: "Report automation and ETL processes. Developed retention report, key metrics report and many others",
-                desc5: "AI, LLM, MCP development. Created AI incident manager, task creation assistant, MCP YouTrack, MCP OpenSearch",
-                desc6: "Created dashboards, event schemas and real-time alerting based on OpenSearch/ElasticSearch",
-                desc7: "Active participation in company life, developed forecasting system for internal tournament",
-                desc8: "Execution of team lead responsibilities for development team and tech lead for analytics department: conducted daily standups, sprint planning, coordinated work of cross-functional team of 10 people, released features"
+                title: "Senior Data Analyst (ML/DS)",
+                company: '<a href="https://gear-games.com/ru/" target="_blank" rel="noopener">Gear Games</a>',
+                desc: "Conducted in-depth analytical research and increased 1-day retention by 30% through product insights and experimentation.",
+                desc1: "Conducted in-depth analytical research and increased 1-day retention by 30% through product insights and experimentation.",
+                desc2: "Developed the company’s A/B testing culture — built automated frameworks for experiment design and result evaluation; successfully completed 20+ A/B tests.",
+                desc3: "Enhanced internal Python analytics libraries: created a multithreaded data extraction library, accelerating data loading by 50×.",
+                desc4: "Implemented ML-based clustering of incoming traffic: accurately labeled users based on their first-day behavior to improve marketing and monetization efficiency; reduced user acquisition costs and improved targeting accuracy.",
+                desc5: "Automated reporting and ETL workflows: built retention dashboards and cross-project performance reports.",
+                desc6: "Pioneered internal AI and LLM initiatives: developed an AI incident manager, task assistant, MCP integrations for YouTrack and OpenSearch.",
+                desc7: "Designed real-time dashboards, event schemas, and alerting systems on top of OpenSearch/ElasticSearch.",
+                desc8: "Contributed to company-wide initiatives, including building a forecasting system for the internal tournament.",
+                desc9: "Acted as Tech Lead and Interim Team Lead: led daily meetings, sprint planning, and coordinated a cross-functional team of 10 people to deliver product features."
             },
             job2: {
                 date: "10/2022 – 01/2024 (Remote)",
-                title: "Fullstack Analyst",
-                company: "Quant Shark Technologies (startup)",
-                desc: "Designed and implemented the architecture of a comprehensive backtesting system for cryptocurrency trading strategies on historical market data",
-                desc2: "Developed and automated a news-driven trading bot that opens long positions on secondary exchanges immediately after listings are announced for new tokens on Binance, integrating real-time news parsing and exchange APIs",
-                desc3: "Researched, built, and backtested statistical arbitrage strategies with adaptive retraining windows based on academic literature",
-                desc4: "Deployed and maintained trading automation infrastructure on a dedicated Ubuntu server, ensuring stable execution and monitoring of live strategies",
-                desc5: "Authored technical specifications and architectural documentation for the backtesting framework to guide further development by the engineering team"
+                title: "Quantitative Researcher / Algorithmic Trading Developer",
+                company: '<a href="https://qtshark.com/" target="_blank" rel="noopener">Quant Shark Technologies (Startup by Kamtor)</a>',
+                desc: "Studied and implemented algorithmic trading strategies while building the startup’s quantitative research stack.",
+                desc1: 'Studied and implemented the strategy from the academic paper “Evaluation of Dynamic Cointegration-Based Pairs Trading Strategy in the Cryptocurrency Market” (Masood Tadi & Irina Kortchemski, 2021).',
+                desc2: "Supervised the architecture and development of an internal backtesting system, including technical documentation, data ingestion pipeline, computation modules, and visualization layer.",
+                desc3: "Automated trading strategies via cryptocurrency exchange APIs: implemented a strategy that automatically opens long positions upon Binance listing announcements; deployed and maintained trading bots on dedicated Ubuntu servers.",
+                desc4: "Performed parameter optimization and sensitivity analysis of trading strategies."
             },
             job3: {
+                date: "08/2021 – 09/2022",
+                title: "Data Analyst / Technical Specialist",
+                company: '<a href="https://incraft3d.ru/" target="_blank" rel="noopener">InCraft by Baustov</a>',
+                desc: "Designed and automated core analytics tooling for a 3D-printing production workflow.",
+                desc1: "Designed and built a custom equipment and consumables tracking system for 3D printers, covering supply, stock, and utilization workflows.",
+                desc2: "Optimized 3D printing parameters through data-driven analysis, reducing material waste and print errors.",
+                desc3: "Developed a custom Python plugin for Cura to version-control print settings and store technical notes, improving reproducibility of production results.",
+                desc4: "Built a demand and seasonality forecasting model to optimize supply planning and ensure stock availability during peak order periods."
+            },
+            job4: {
                 date: "06/2022 – 09/2022",
-                title: "Junior ML&AI Researcher",
-                company: "NIIgazEconomika LLC",
-                desc: "Solved problems in the field of time series anomaly detection (ML, AI)"
+                title: "ML & AI Intern",
+                company: '<a href="https://niigazekonomika.gazprom.ru/" target="_blank" rel="noopener">NIIgazEconomika LLC</a>',
+                desc: "Contributed to applied research on AI-driven anomaly detection for industrial data.",
+                desc1: "Conducted research on time series anomaly detection using machine learning and AI-based methods.",
+                desc2: "Developed a clustering-based anomaly detection model for identifying irregularities in production and operational data."
             }
         },
         education: {

@@ -1526,8 +1526,48 @@ body {
     z-index: 1;
 }
 
+.timeline-company a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(var(--primary-color-rgb), 0.4);
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+.timeline-company a:hover,
+.timeline-company a:focus-visible {
+    color: var(--primary-color);
+    border-bottom-color: rgba(var(--primary-color-rgb), 1);
+}
+
 .timeline-content:hover .timeline-company {
     color: var(--primary-color);
+}
+
+.timeline-content:hover .timeline-company a {
+    color: var(--primary-color);
+    border-bottom-color: rgba(var(--primary-color-rgb), 1);
+}
+
+body.theme-analytics .timeline-company a {
+    color: #1d4ed8;
+    border-bottom-color: rgba(29, 78, 216, 0.35);
+}
+
+body.theme-analytics .timeline-company a:hover,
+body.theme-analytics .timeline-company a:focus-visible {
+    color: #1d4ed8;
+    border-bottom-color: rgba(29, 78, 216, 0.7);
+}
+
+body.theme-engineering .timeline-company a {
+    color: #ff8c42;
+    border-bottom-color: rgba(255, 140, 66, 0.5);
+}
+
+body.theme-engineering .timeline-company a:hover,
+body.theme-engineering .timeline-company a:focus-visible {
+    color: #ff8c42;
+    border-bottom-color: rgba(255, 140, 66, 0.85);
 }
 
 .timeline-description {
