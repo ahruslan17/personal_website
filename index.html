@@ -64,16 +64,33 @@
 
     <!-- Hero & About Combined Section -->
     <section id="about" class="hero-about-section">
+        <!-- Decorative Background Elements -->
+        <div class="hero-bg-decoration">
+            <div class="hero-bg-circle hero-bg-circle-1"></div>
+            <div class="hero-bg-circle hero-bg-circle-2"></div>
+            <div class="hero-bg-circle hero-bg-circle-3"></div>
+            <div class="hero-bg-grid"></div>
+        </div>
+        
         <div class="container">
             <div class="hero-about-wrapper">
                 <!-- Left Column - Hero Info -->
                 <div class="hero-about-main">
                     <div class="hero-intro">
-                        <span class="hero-greeting" data-i18n="hero.greeting">Привет, я</span>
-                        <h1 class="hero-name" data-i18n="hero.name">Руслан Ахметзянов</h1>
+                        <div class="hero-greeting-wrapper">
+                            <span class="hero-greeting" data-i18n="hero.greeting">Привет, я</span>
+                            <div class="greeting-accent"></div>
+                        </div>
+                        <h1 class="hero-name">
+                            <span class="name-gradient" data-i18n="hero.name">Руслан Ахметзянов</span>
+                        </h1>
                         <div class="hero-roles">
-                            <span class="role-badge analytics-role clickable" data-role="analytics" data-i18n="hero.roleAnalytics">Product Analyst</span>
-                            <span class="role-badge engineering-role clickable" data-role="engineering" data-i18n="hero.roleEngineering">Analytics Engineer</span>
+                            <span class="role-badge analytics-role clickable" data-role="analytics" data-i18n="hero.roleAnalytics">
+                                <span class="role-text">Product Analyst</span>
+                            </span>
+                            <span class="role-badge engineering-role clickable" data-role="engineering" data-i18n="hero.roleEngineering">
+                                <span class="role-text">Analytics Engineer</span>
+                            </span>
                         </div>
                     </div>
                     
@@ -89,44 +106,105 @@
                     </div>
                     
                     <div class="hero-cta">
-                        <a href="#projects" class="btn btn-primary" data-i18n="hero.btnProjects">Проекты</a>
-                        <a href="#contact" class="btn btn-secondary" data-i18n="hero.btnContact">Связаться</a>
+                        <a href="#projects" class="btn btn-primary">
+                            <span class="btn-text" data-i18n="hero.btnProjects">Проекты</span>
+                            <span class="btn-arrow">→</span>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span class="btn-text" data-i18n="hero.btnContact">Связаться</span>
+                        </a>
                     </div>
                 </div>
                 
-                <!-- Right Column - About Cards -->
+                <!-- Right Column - Photo Slider & Stats -->
                 <div class="hero-about-cards">
-                    <!-- Analytics Card -->
-                    <div class="about-card analytics-card">
-                        <div class="card-content">
-                            <div class="card-highlight" data-i18n="about.p1.strong">Как Product Analyst,</div>
-                            <p class="card-text" data-i18n="about.p1.text">я провожу сложные исследования пользовательского поведения, A/B-тесты и создаю дашборды для принятия решений. Проектирую аналитические события и схемы данных в OpenSearch и PostgreSQL.</p>
+                    <!-- Photo Slider -->
+                    <div class="photo-slider-container">
+                        <div class="photo-slider">
+                            <div class="photo-slide active">
+                                <img src="assets/photos/1.JPG" alt="Photo 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="photo-placeholder" style="display:none;">
+                                    <div class="placeholder-icon"></div>
+                                    <p>Добавьте фото в assets/photos/</p>
+                                </div>
+                            </div>
+                            <div class="photo-slide">
+                                <img src="assets/photos/2.jpg" alt="Photo 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="photo-placeholder" style="display:none;">
+                                    <div class="placeholder-icon"></div>
+                                    <p>Добавьте фото в assets/photos/</p>
+                                </div>
+                            </div>
+                            <div class="photo-slide">
+                                <img src="assets/photos/3.jpg" alt="Photo 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="photo-placeholder" style="display:none;">
+                                    <div class="placeholder-icon"></div>
+                                    <p>Добавьте фото в assets/photos/</p>
+                                </div>
+                            </div>
+                            <div class="photo-slide">
+                                <img src="assets/photos/4.png" alt="Photo 4" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="photo-placeholder" style="display:none;">
+                                    <div class="placeholder-icon"></div>
+                                    <p>Добавьте фото в assets/photos/</p>
+                                </div>
+                            </div>
+                            <div class="photo-slide">
+                                <img src="assets/photos/5.JPG" alt="Photo 5" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="photo-placeholder" style="display:none;">
+                                    <div class="placeholder-icon"></div>
+                                    <p>Добавьте фото в assets/photos/</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="photo-slider-dots">
+                            <span class="dot active" data-slide="0"></span>
+                            <span class="dot" data-slide="1"></span>
+                            <span class="dot" data-slide="2"></span>
+                            <span class="dot" data-slide="3"></span>
+                            <span class="dot" data-slide="4"></span>
                         </div>
                     </div>
                     
-                    <!-- Engineering Card -->
-                    <div class="about-card engineering-card">
-                        <div class="card-content">
-                            <div class="card-highlight" data-i18n="about.p2.strong">Как Analytics Engineer,</div>
-                            <p class="card-text" data-i18n="about.p2.text">я разрабатываю надежные ETL-процессы, создаю ML-модели и внедряю AI-решения для автоматизации аналитических процессов.</p>
+                    <!-- Stats Section -->
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-value="4">4+</div>
+                            <div class="stat-label" data-i18n="about.stat1">года опыта</div>
+                            <div class="stat-accent"></div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-value="100">100+</div>
+                            <div class="stat-label" data-i18n="about.stat2">аналитических исследований</div>
+                            <div class="stat-accent"></div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-value="10">10+</div>
+                            <div class="stat-label" data-i18n="about.stat3">автоматизированных отчётов / ETL-процессов</div>
+                            <div class="stat-accent"></div>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Stats Section -->
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <div class="stat-number">3+</div>
-                    <div class="stat-label" data-i18n="about.stat1">года опыта</div>
+            <!-- About Cards Section -->
+            <div class="about-cards-bottom">
+                <!-- Analytics Card -->
+                <div class="about-card analytics-card">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="card-highlight" data-i18n="about.p1.strong">Как Product Analyst,</div>
+                        <p class="card-text" data-i18n="about.p1.text">я провожу сложные исследования пользовательского поведения, A/B-тесты и создаю дашборды для принятия решений. Проектирую аналитические события и схемы данных в OpenSearch и PostgreSQL.</p>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">100+</div>
-                    <div class="stat-label" data-i18n="about.stat2">аналитических исследований</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">10+</div>
-                    <div class="stat-label" data-i18n="about.stat3">автоматизированных отчётов / ETL-процессов</div>
+                
+                <!-- Engineering Card -->
+                <div class="about-card engineering-card">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="card-highlight" data-i18n="about.p2.strong">Как Analytics Engineer,</div>
+                        <p class="card-text" data-i18n="about.p2.text">я разрабатываю надежные ETL-процессы, создаю ML-модели и внедряю AI-решения для автоматизации аналитических процессов.</p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -105,7 +105,24 @@ class LanguageManager {
                 console.warn('⚠️ No translation found for key:', key);
             }
         });
+        
+        // Special handling for hero name - split into two parts
+        this.splitHeroName();
+        
         console.log('✅ Translations updated');
+    }
+
+    splitHeroName() {
+        const nameElement = document.querySelector('.hero-name .name-gradient');
+        if (nameElement) {
+            const fullName = nameElement.textContent.trim();
+            const nameParts = fullName.split(' ');
+            if (nameParts.length >= 2) {
+                const firstName = nameParts[0];
+                const lastName = nameParts.slice(1).join(' ');
+                nameElement.innerHTML = `<span class="name-part">${firstName}</span> <span class="name-part">${lastName}</span>`;
+            }
+        }
     }
 
     getTranslation(key) {
@@ -846,6 +863,90 @@ class StackHintManager {
     }
 }
 
+// Photo Slider
+class PhotoSlider {
+    constructor() {
+        this.slider = document.querySelector('.photo-slider');
+        this.slides = document.querySelectorAll('.photo-slide');
+        this.dots = document.querySelectorAll('.photo-slider-dots .dot');
+        this.currentSlide = 0;
+        this.autoSlideInterval = null;
+        this.autoSlideDelay = 3000; // 3 seconds
+        
+        if (this.slides.length === 0) {
+            return;
+        }
+        
+        this.init();
+    }
+    
+    init() {
+        // Add click handlers for dots
+        this.dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                this.goToSlide(index);
+            });
+        });
+        
+        // Start auto-slide
+        this.startAutoSlide();
+        
+        // Pause on hover
+        const container = document.querySelector('.photo-slider-container');
+        if (container) {
+            container.addEventListener('mouseenter', () => {
+                this.stopAutoSlide();
+            });
+            
+            container.addEventListener('mouseleave', () => {
+                this.startAutoSlide();
+            });
+        }
+    }
+    
+    goToSlide(index) {
+        if (index === this.currentSlide) return;
+        
+        // Remove active class from current slide and dot
+        this.slides[this.currentSlide].classList.remove('active');
+        this.dots[this.currentSlide].classList.remove('active');
+        
+        // Add prev class for animation
+        if (index < this.currentSlide) {
+            this.slides[this.currentSlide].classList.add('prev');
+        } else {
+            this.slides[this.currentSlide].classList.remove('prev');
+        }
+        
+        // Update current slide
+        this.currentSlide = index;
+        
+        // Add active class to new slide and dot
+        this.slides[this.currentSlide].classList.add('active');
+        this.slides[this.currentSlide].classList.remove('prev');
+        this.dots[this.currentSlide].classList.add('active');
+    }
+    
+    nextSlide() {
+        const nextIndex = (this.currentSlide + 1) % this.slides.length;
+        this.goToSlide(nextIndex);
+    }
+    
+    startAutoSlide() {
+        this.stopAutoSlide();
+        this.autoSlideInterval = setInterval(() => {
+            this.nextSlide();
+        }, this.autoSlideDelay);
+    }
+    
+    stopAutoSlide() {
+        if (this.autoSlideInterval) {
+            clearInterval(this.autoSlideInterval);
+            this.autoSlideInterval = null;
+        }
+    }
+}
+
 // Google Analytics Referral Tracker
 class ReferralTracker {
     constructor(config = {}) {
@@ -993,6 +1094,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize stack hint manager and make it globally accessible
     const stackHintManager = new StackHintManager();
     window.stackHintManager = stackHintManager;
+    
+    // Initialize photo slider
+    const photoSlider = new PhotoSlider();
+    window.photoSlider = photoSlider;
     
     // Initialize Google Analytics referral tracker
     const referralTracker = new ReferralTracker();
