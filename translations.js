@@ -130,7 +130,8 @@ const translations = {
                 desc1: "Разработал с нуля систему учёта оборудования и расходных материалов для 3D-принтеров — реализовал отслеживание поступлений, текущих остатков и использования комплектующих.",
                 desc2: "Оптимизировал параметры 3D-печати на основе анализа производственных данных, что сократило брак и снизило расход материалов.",
                 desc3: "Создал плагин для Cura (Python) для версионирования параметров печати и ведения технических заметок, что повысило воспроизводимость результатов.",
-                desc4: "Построил модель прогнозирования спроса и сезонности расходников, позволившую планировать закупки заранее и поддерживать нужный уровень запасов в периоды пиковых заказов."
+                desc4: "Построил модель прогнозирования спроса и сезонности расходников, позволившую планировать закупки заранее и поддерживать нужный уровень запасов в периоды пиковых заказов.",
+                desc5: 'Записывал обучающие видео по эксплуатации 3D-принтеров. <a href="https://www.youtube.com/watch?v=sfYMo3Qh5Ek" target="_blank" rel="noopener">Пример видео</a>'
             },
             job4: {
                 date: "06/2022 – 09/2022",
@@ -313,7 +314,8 @@ const translations = {
                 desc1: "Designed and built a custom equipment and consumables tracking system for 3D printers, covering supply, stock, and utilization workflows.",
                 desc2: "Optimized 3D printing parameters through data-driven analysis, reducing material waste and print errors.",
                 desc3: "Developed a custom Python plugin for Cura to version-control print settings and store technical notes, improving reproducibility of production results.",
-                desc4: "Built a demand and seasonality forecasting model to optimize supply planning and ensure stock availability during peak order periods."
+                desc4: "Built a demand and seasonality forecasting model to optimize supply planning and ensure stock availability during peak order periods.",
+                desc5: 'Created educational videos on 3D printer operation and maintenance. <a href="https://www.youtube.com/watch?v=sfYMo3Qh5Ek" target="_blank" rel="noopener">Example video</a>'
             },
             job4: {
                 date: "06/2022 – 09/2022",
