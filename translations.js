@@ -143,7 +143,7 @@ const translations = {
             }
         },
         education: {
-            title: "Образование и публикации",
+            title: "Образование",
             university: "Российский государственный университет нефти и газа имени И.М. Губкина",
             degree1: {
                 badge: "Бакалавр",
@@ -327,7 +327,7 @@ const translations = {
             }
         },
         education: {
-            title: "Education & Publications",
+            title: "Education",
             university: "Gubkin Russian State University of Oil and Gas",
             degree1: {
                 badge: "Bachelor",
