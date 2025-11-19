@@ -2603,8 +2603,72 @@ body.theme-engineering .timeline-company a:focus-visible {
     background: var(--bg-card);
 }
 
+.diploma-preview-conference .diploma-preview-image img {
+    background: transparent;
+}
+
 .diploma-preview-inline:hover .diploma-preview-image img {
     transform: scale(1.03);
+}
+
+.diploma-preview-conference {
+    padding: 0;
+    margin: 0 0 1rem 2rem;
+    display: inline-block;
+    line-height: 0;
+    border: none;
+    overflow: visible;
+    float: right;
+    clear: right;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.diploma-preview-conference:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.diploma-preview-conference .diploma-preview-image {
+    padding: 0;
+    height: auto;
+    max-width: 200px;
+    margin: 0;
+    border-radius: 4px;
+    background: transparent;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    width: auto;
+    display: inline-block;
+    line-height: 0;
+    border: none;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.diploma-preview-conference:hover .diploma-preview-image {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.diploma-preview-conference .diploma-preview-image img {
+    position: relative;
+    width: auto;
+    max-width: 200px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    border: none;
+    outline: none;
+    transition: transform 0.3s ease;
+}
+
+.diploma-preview-conference:hover .diploma-preview-image img {
+    transform: scale(1.02);
+}
+
+.diploma-preview-conference .diploma-overlay-inline {
+    display: none;
 }
 
 .diploma-placeholder {
@@ -2684,6 +2748,186 @@ body.theme-engineering .timeline-company a:focus-visible {
     font-weight: 600;
     font-size: 1rem;
     text-align: center;
+}
+
+/* Conferences Section */
+.conferences-section {
+    background: var(--bg-primary);
+}
+
+.conferences-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.conference-item {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 2px solid var(--border-color);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    gap: 2rem;
+}
+
+.conference-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--gradient-start), var(--gradient-end));
+    transform: scaleY(0);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.conference-item:hover::before {
+    transform: scaleY(1);
+}
+
+.conference-item:hover {
+    transform: translateX(10px);
+    border-color: var(--primary-color);
+    box-shadow: 0 12px 35px var(--shadow-color);
+}
+
+.conference-year {
+    min-width: 80px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    flex-shrink: 0;
+    text-align: center;
+    padding: 0.5rem;
+    background: linear-gradient(135deg, rgba(var(--primary-color-rgb), 0.1) 0%, rgba(var(--primary-color-rgb), 0.05) 100%);
+    border-radius: 8px;
+    height: fit-content;
+}
+
+.conference-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.conference-item:has(.diploma-preview-conference) .conference-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.conference-item:has(.diploma-preview-conference) .conference-details {
+    position: relative;
+}
+
+.conference-item:has(.diploma-preview-conference) .diploma-preview-conference {
+    float: right;
+    margin: 0 0 1rem 2rem;
+    clear: right;
+}
+
+.conference-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.4;
+    margin: 0;
+}
+
+.conference-date {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.conference-award {
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    background: linear-gradient(135deg, rgba(var(--primary-color-rgb), 0.15) 0%, rgba(var(--primary-color-rgb), 0.08) 100%);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    width: fit-content;
+    margin-bottom: 0.5rem;
+}
+
+.conference-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.conference-details p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.conference-details strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.conference-topic {
+    font-style: italic;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.conference-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.conference-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    background: rgba(var(--primary-color-rgb), 0.08);
+    border: 1px solid transparent;
+}
+
+.conference-links a:hover {
+    background: rgba(var(--primary-color-rgb), 0.15);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.conference-diploma-btn {
+    background: linear-gradient(135deg, rgba(var(--primary-color-rgb), 0.1) 0%, rgba(var(--primary-color-rgb), 0.05) 100%);
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.conference-diploma-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(var(--primary-color-rgb), 0.3);
 }
 
 .publications-section-new {
@@ -3890,6 +4134,31 @@ body.theme-engineering .timeline-company a:focus-visible {
     .nav-links {
         gap: 1rem;
     }
+
+    .conference-item {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .conference-item:has(.diploma-preview-conference) .conference-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .conference-item:has(.diploma-preview-conference) .diploma-preview-conference {
+        grid-column: 1;
+        grid-row: auto;
+        justify-self: center;
+    }
+
+    .conference-year {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .conference-name {
+        font-size: 1.1rem;
+    }
 }
 
 @media (max-width: 600px) {
@@ -4137,6 +4406,30 @@ body.theme-engineering .timeline-company a:focus-visible {
 
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .conference-item {
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+
+    .conference-name {
+        font-size: 1rem;
+    }
+
+    .conference-year {
+        font-size: 1.1rem;
+        padding: 0.4rem;
+    }
+
+    .conference-links {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .conference-links a {
+        width: 100%;
+        text-align: center;
     }
 
     .lang-toggle {

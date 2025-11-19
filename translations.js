@@ -10,6 +10,7 @@ const translations = {
             experience: "Опыт",
             stack: "Стэк",
             education: "Образование",
+            conferences: "Конференции",
             projects: "Проекты",
             contact: "Контакты",
             tooltip: {
@@ -160,6 +161,39 @@ const translations = {
             pub3: "Intelligent Analysis Of Geological And Geophysical Data",
             pub4: "A series of digests of scientific and technical publications"
         },
+        conferences: {
+            title: "Конференции",
+            conf1: {
+                name: "Участие в конференции Губкинского университета «VII Региональная Научно-Техническая Конференция: Губкинский Университет В Решении Вопросов Нефтегазовой Отрасли России»",
+                date: "19-20 октября 2023 г.",
+                details: "Работа включена в сборник трудов: стр. 319.",
+                link1: "Ссылка на elibrary",
+                link2: "Ссылка на электронную версию издания"
+            },
+            conf2: {
+                name: "Участие в конференции Distributed Computer and Communication Networks: Control, Computation, Communications",
+                date: "25-29 сентября 2023 г., Москва, Россия",
+                topic: "Тема выступления: Machine Learning-Based Models for the Compressibility Factor of Natural Gas",
+                result: "По итогам конференции расширенная версия нашей с Ольгой Кочуевой работы будет напечатана в журнале Lecture Notes in Computer Science (LNCS) | Springer.",
+                link1: "Ссылка на программу конференции",
+                link2: "Licence to Publish\n\nProceedings Papers - Springer Nature",
+                link3: "Исследование"
+            },
+            conf3: {
+                name: "V Всероссийская молодежная научная конференция \"Актуальные проблемы нефти и газа\"",
+                award: "2-е место",
+                date: "21 октября 2022 г.",
+                level: "Уровень участия:",
+                organizer: "Организаторы:",
+                organizerName: "Институт проблем нефти и газа Российской академии наук",
+                topic: "Тема работы:",
+                topicName: "Применение методов машинного обучения и искусственного интеллекта для аппроксимации коэффициента сжимаемости природного газа",
+                supervisor: "Научный руководитель:",
+                supervisorName: "Ольга Кочуева, кандидат технических наук, доцент кафедры прикладной математики и компьютерного моделирования РГУ им. И.М. Губкина",
+                link1: "Ссылка на elibrary",
+                diplomaLink: "Диплом"
+            }
+        },
         publications: {
             title: "Публикации",
             researchgate: "ResearchGate",
@@ -194,6 +228,7 @@ const translations = {
             experience: "Experience",
             stack: "Stack",
             education: "Education",
+            conferences: "Conferences",
             projects: "Projects",
             contact: "Contact",
             tooltip: {
@@ -343,6 +378,39 @@ const translations = {
             pub2: "Machine Learning-Based Models for the Compressibility Factor of Natural Gas",
             pub3: "Intelligent Analysis Of Geological And Geophysical Data",
             pub4: "A series of digests of scientific and technical publications"
+        },
+        conferences: {
+            title: "Conferences",
+            conf1: {
+                name: "Participation in Gubkin University Conference «VII Regional Scientific and Technical Conference: Gubkin University in Solving Issues of the Russian Oil and Gas Industry»",
+                date: "October 19-20, 2023",
+                details: "Work included in proceedings: p. 319.",
+                link1: "Link to elibrary",
+                link2: "Link to electronic version of publication"
+            },
+            conf2: {
+                name: "Participation in Distributed Computer and Communication Networks: Control, Computation, Communications",
+                date: "September 25-29, 2023, Moscow, Russia",
+                topic: "Presentation topic: Machine Learning-Based Models for the Compressibility Factor of Natural Gas",
+                result: "Following the conference, an extended version of our work with Olga Kochueva will be published in Lecture Notes in Computer Science (LNCS) | Springer.",
+                link1: "Link to conference program",
+                link2: "Licence to Publish\n\nProceedings Papers - Springer Nature",
+                link3: "Research"
+            },
+            conf3: {
+                name: "V All-Russian Youth Scientific Conference \"Current Problems of Oil and Gas\"",
+                award: "2nd Place",
+                date: "October 21, 2022",
+                level: "Participation level:",
+                organizer: "Organizers:",
+                organizerName: "Institute of Oil and Gas Problems of the Russian Academy of Sciences",
+                topic: "Work topic:",
+                topicName: "Application of Machine Learning and Artificial Intelligence Methods for Approximating the Compressibility Factor of Natural Gas",
+                supervisor: "Scientific supervisor:",
+                supervisorName: "Olga Kochueva, Candidate of Technical Sciences, Associate Professor of Applied Mathematics and Computer Modeling Department, Gubkin University",
+                link1: "Link to elibrary",
+                diplomaLink: "Diploma"
+            }
         },
         publications: {
             title: "Publications",
